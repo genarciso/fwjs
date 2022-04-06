@@ -6,11 +6,12 @@ interface ResultsProp {
 
 // export const Results = () => <h1>Resultados</h1>
 export function Results(props: ResultsProp) {
-  const answers = props.answers.map( txt, index => <li key={ index }>{ txt }</li>)
+  const answersList = props.answers.map( txt => <li key={ txt }>{ txt }</li>)
   return (<div>
     <h1>Resultados</h1>
     <ul>
-      {answers}
+      {answersList}
     </ul>
   </div> )
+
 }
