@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Question } from './Question';
 import { Results } from './Results';
+import './Question.css'
 
 const questions = [
   {
@@ -14,19 +15,38 @@ const questions = [
 ]
 
 export function Quiz() {
-  const showResults = false
+  const [showResults, setShowResults] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
-
+  const [answers, setAnswers] = useState<string[]>([])
+  
   function confirm() {
     console.log('Confirma resposta')
-    setCurrentQuestion(currentQuestion + 1)
+    if (currentQuestion < questions.length -1) {
+      setCurrentQuestion(currentQuestion + 1)
+    } 
+    else {
+      setShowResults(true)
+    }
+    
   }
   
+  function select(optionIndex: number) {
+    console.log(`Selecionou a opção ${optionIndex}`)
+    const ans = [...answers]
+    ans[currentQuestion] = optionIndex
+    setAnswers(ans)
+
+    
+  }
+
   if (showResults) {
-    return <Results />
+    console.log(answers)
+    cosnt ans = answers.map((option, questionIndex) => questions[questionIndex] = option)
+    return <Results answers={ ans }/>
   }
   else {
     return <div>
+      Opção selecionada: {answers}
       <Question
       statement={ questions[currentQuestion].statement }
       options={ questions[currentQuestion].options }
