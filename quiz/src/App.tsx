@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Quiz } from './components/Quiz';
+import { MainTab } from './components/MainTab/MainTab';
 
 function App() {
-  return <Quiz />
+  return <MainTab />
 }
 
 export default App;
