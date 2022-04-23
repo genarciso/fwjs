@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Quiz from './components/Quiz.vue'
+import Main from "@/components/Main/Main.vue";
 
 </script>
 
 <template>
-  <Quiz></Quiz>
+  <Main></Main>
 </template>
 
 <style>
