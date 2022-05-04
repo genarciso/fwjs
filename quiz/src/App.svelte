@@ -1,7 +1,7 @@
-<Quiz />
+<Main />
 
 <script>
-import './assets/base.css';
-import Quiz from './components/quiz.svelte'
+    import Main from './components/Main/main.svelte'
+    import './assets/base.css';
 </script>
 
