@@ -3,7 +3,7 @@
         {#each [0,1, 2, 3] as index }
             <li>
                 <button class={index === selected ? 'selected' : ''}
-                        on:click={() => clicked(index) }>
+                        on:click={() => onClicked(index) }>
                     Tab { index + 1 }
                 </button>
             </li>
@@ -17,7 +17,8 @@
     export let selected: number;
     const dispatcher = createEventDispatcher()
 
-    function clicked(idx: number) {
+    function onClicked(idx: number) {
+        selected = idx
         dispatcher('selection', idx)
     }
 </script>
