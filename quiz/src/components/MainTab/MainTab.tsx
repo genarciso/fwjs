@@ -1,5 +1,5 @@
-import { MenuTab } from '../../components/MenuTab/MenuTab';
-import { ConteudoTab } from '../../components/ConteudoTab/ConteudoTab';
+import { MenuTab } from '../MenuTab/MenuTab';
+import { ConteudoTab } from '../ConteudoTab/ConteudoTab';
 import { useState } from 'react';
 
 export function MainTab() {
