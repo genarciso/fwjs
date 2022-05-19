@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 
-import Menu from "@/components/Menu/Menu.vue";
-import Painel from "@/components/Painel/Painel.vue";
+import Menu from "../Menu/Menu.vue";
+import Painel from "../Painel/Painel.vue";
 import {ref} from "vue";
 
   const abaSelecionada = ref(0)

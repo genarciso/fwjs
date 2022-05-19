@@ -6,8 +6,7 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
-
-export interface PainelProp {
+  export interface PainelProp {
     abaAtual: number
   }
   defineProps<PainelProp>()
