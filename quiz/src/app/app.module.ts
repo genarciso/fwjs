@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser'
 
-import { AppComponent } from './app.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { MainComponent } from './components/main/main.component';
-import { PainelComponent } from './components/painel/painel.component';
+import { AppComponent } from './app.component'
+import { QuestionFormComponent } from './components/question-form/question-form.component'
+import { QuestionListComponent } from './components/question-list.component'
 import { QuestionComponent } from './components/question.component'
 import { QuizComponent } from './components/quiz.component'
 import { ResultsComponent } from './components/results.component'
@@ -15,12 +15,12 @@ import { ResultsComponent } from './components/results.component'
     QuizComponent,
     QuestionComponent,
     ResultsComponent,
-    MenuComponent,
-    MainComponent,
-    PainelComponent
+    QuestionFormComponent,
+    QuestionListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
