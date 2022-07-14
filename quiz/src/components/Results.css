@@ -1,0 +1,7 @@
+.questionResult + .questionResult {
+    margin-top: 10px;
+}
+
+.questionResult h3 {
+    margin: 0;
+}

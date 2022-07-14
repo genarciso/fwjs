@@ -1,17 +1,16 @@
-import React from 'react';
+import './Results.css'
 
-interface ResultsProp {
+interface ResultsProps {
+  statements: string[]
   answers: string[]
 }
 
-// export const Results = () => <h1>Resultados</h1>
-export function Results(props: ResultsProp) {
-  const answersList = props.answers.map( txt => <li key={ txt }>{ txt }</li>)
-  return (<div>
-    <h1>Resultados</h1>
-    <ul>
-      {answersList}
-    </ul>
-  </div> )
-
+export function Results(props: ResultsProps) {
+  const results = props.answers.map((answer, index) => (
+      <div className="questionResult" key={answer}>
+        <h3>Questão { index + 1 }</h3>
+        { props.statements[index] }: { answer }
+      </div>
+  ))
+  return <div>{ results }</div>
 }
