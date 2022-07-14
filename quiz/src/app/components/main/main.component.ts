@@ -8,6 +8,9 @@ import {Component} from '@angular/core';
 export class MainComponent {
   abaSelecionada: number = 0
 
+
+  constructor() {}
+
   select(optionIndex: number) {
     this.abaSelecionada = optionIndex
   }

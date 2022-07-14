@@ -1,0 +1,54 @@
+<form class="qst-form " #conteudoForm="ngForm" (ngSubmit)="conteudoForm.valid && submit()">
+  <div>
+    <label>Número de abas</label>
+    <input type="number"
+           name="numAbas"
+           #numAbas="ngModel"
+           [(ngModel)] ="painelInfo.qtdAbas"
+           (change)="mudarQtdAbas()"
+            min="1" max="5" required
+    />
+    <div *ngIf="(numAbas.dirty || conteudoForm.submitted) && numAbas.errors" class="errors">
+      <div *ngIf="numAbas.errors['min']">
+        Deve haver pelo menos uma aba
+      </div>
+      <div *ngIf="numAbas.errors['max']">
+        Deve haver no máximo cinco opções
+      </div>
+      <div *ngIf="numAbas.errors['required']">
+        É necessário preencher esse campo
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let indice of qtdConteudos" ngModelGroup="abas-{{indice}}">
+    <div>
+      <label>Título</label>
+      <input type="text"
+             #tituloConteudo="ngModel"
+             name="titulo"
+             [(ngModel)]="painelInfo.abas[indice].titulo"
+             required
+      />
+      <div *ngIf="(tituloConteudo.touched || conteudoForm.submitted) && tituloConteudo.errors" class="errors">
+        <div *ngIf="tituloConteudo.errors['required']">
+          É necessário informar o título da aba
+        </div>
+      </div>
+    </div>
+    <div>
+      <label>Conteúdo</label>
+      <textarea #cont="ngModel"
+                [(ngModel)]="painelInfo.abas[indice].conteudo"
+                name="conteudo"
+                required>
+      </textarea>
+      <div *ngIf="(cont.touched || conteudoForm.submitted) && cont.errors" class="errors">
+        <div *ngIf="cont.errors['required']">
+          É necessário informar o contéudo da aba
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="submit" value="Salvar"/>
+</form>

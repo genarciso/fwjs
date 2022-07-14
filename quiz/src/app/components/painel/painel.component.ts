@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {ConteudoService} from "../../services/conteudo.service";
 
 @Component({
   selector: 'app-painel',
@@ -7,4 +8,7 @@ import {Component, Input} from '@angular/core';
 })
 export class PainelComponent {
   @Input() aba: number = 0
+
+  constructor(public conteudoService: ConteudoService) {
+  }
 }

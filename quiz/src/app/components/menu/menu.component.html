@@ -1,9 +1,9 @@
 <nav class='header-menu'>
   <ul>
-    <li *ngFor="let index of [0,1, 2, 3]">
-      <button [ngClass]="{selected: index === selected}"
-              (click)="selected = index; selection.emit(index)">
-        Tab {{ index+1 }}
+    <li *ngFor="let aba of conteudoService.painelInfo.abas, index as i">
+      <button [ngClass]="{selected: i === selecionado}"
+              (click)="selecionado = i; selecao.emit(i)">
+         {{ conteudoService.painelInfo.abas[i].titulo }}
       </button>
     </li>
   </ul>
