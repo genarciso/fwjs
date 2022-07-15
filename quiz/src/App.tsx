@@ -4,6 +4,8 @@ import { Question, QuestionProps } from './components/Question';
 import { QuestionForm } from './components/QuestionForm';
 import { Quiz } from './components/Quiz';
 import { useQuestions } from './hooks/question-hook';
+import {ConteudoForm} from "./components/ConteudoForm/ConteudoForm";
+import {IConteudo} from "./models/IConteudo";
 
 let emptyQuestion: QuestionProps = {
   statement: 'asfsdfsdf',
@@ -37,11 +39,16 @@ function App() {
 
   // const questionList = questions.map(qst => <Question {...qst} />)
 
+    function onSubmit(conteudos: IConteudo[]){
+      console.log(conteudos)
+    }
+
   return (
-      <QuestionsContext.Provider value={questions}>
-        <QuestionForm onSubmit={updateQuestion} />
-        <QuestionList />
-      </QuestionsContext.Provider>
+      <ConteudoForm onSubmit={onSubmit} />
+      // <QuestionsContext.Provider value={questions}>
+      //   <QuestionForm onSubmit={updateQuestion} />
+      //   <QuestionList />
+      // </QuestionsContext.Provider>
   )
 }
 
