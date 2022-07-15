@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {NgForm, NgModel} from "@angular/forms";
 import {ConteudoAba, ConteudoService, PainelInfo} from "../../services/conteudo.service";
 
 @Component({
@@ -11,6 +11,7 @@ export class ConteudoFormComponent implements OnInit {
   painelInfo: PainelInfo = new PainelInfo();
   qtdConteudos: number[] = [0]
   @ViewChild("conteudoForm") form!: NgForm
+  @ViewChild("numAbas") numAbasForm!: NgModel
 
   constructor(private conteudoService: ConteudoService) {
     this.qtdConteudos = Array(this.painelInfo.qtdAbas).fill(1).map((x,i)=>i++);
@@ -20,11 +21,14 @@ export class ConteudoFormComponent implements OnInit {
   }
 
   mudarQtdAbas() {
-    this.qtdConteudos = Array(this.painelInfo.qtdAbas).fill(1).map((x,i)=>i++);
-    if (this.painelInfo.abas.length < this.painelInfo.qtdAbas) {
-      this.painelInfo.abas.push(new ConteudoAba())
-    } else if (this.painelInfo.abas.length > this.painelInfo.qtdAbas){
-      this.painelInfo.abas.pop()
+    if (this.numAbasForm.valid) {
+      this.qtdConteudos = Array(this.painelInfo.qtdAbas).fill(1).map((x, i) => i++);
+      while (this.painelInfo.abas.length < this.painelInfo.qtdAbas) {
+        this.painelInfo.abas.push(new ConteudoAba())
+      }
+      while (this.painelInfo.abas.length > this.painelInfo.qtdAbas) {
+        this.painelInfo.abas.pop()
+      }
     }
   }
 
