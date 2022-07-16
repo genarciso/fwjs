@@ -1,20 +1,23 @@
-import { MenuTab } from '../MenuTab/MenuTab';
-import { ConteudoTab } from '../ConteudoTab/ConteudoTab';
-import { useState } from 'react';
+import {MenuTab} from '../MenuTab/MenuTab';
+import {ConteudoTab} from '../ConteudoTab/ConteudoTab';
+import React, {useState} from 'react';
+import {IConteudo} from "../../models/IConteudo";
 
-export function MainTab() {
-    const [currentSelection, setCurrentSelection] = useState(0)
+export interface IMain {
+    conteudos: IConteudo[]
+}
 
+
+export function MainTab(props: IMain) {
+    const [ abaSelecionada, setAbaSelecionada ] = useState<number>(0)
     function select(optionIndex: number) {
-        setCurrentSelection(optionIndex)
-      }
+        setAbaSelecionada(optionIndex)
+    }
 
     return (
-        <div id = "main">
-            <MenuTab onSelection={select}/>
-            <ConteudoTab currentTab={currentSelection}/>
-        </div>
-        
-
+            <div id = "main">
+                <MenuTab conteudos={props.conteudos} onSelection={select}/>
+                <ConteudoTab abaAtual={abaSelecionada} conteudos={ props.conteudos }/>
+            </div>
     )
 }

@@ -13,11 +13,10 @@ interface IConteudoForm {
 export function ConteudoForm({ onSubmit }: IConteudoForm) {
     const [ conteudos, setConteudos ] = useState<IConteudo[]>([{
         conteudo: "",
-        aba: 0,
         titulo: ""
     } as IConteudo])
     const { errors, setErrors, check } = useErrors<{[name: string]: boolean}>()     // erros nos campos dos formulários
-    const { touched, touch } = useTouch<{[name: string]: boolean}>()  // indica, para cada campo, se ele foi alterado pelo usuário
+    const { touched, touch } = useTouch()  // indica, para cada campo, se ele foi alterado pelo usuário
 
 
     /**
@@ -46,12 +45,15 @@ export function ConteudoForm({ onSubmit }: IConteudoForm) {
 
             }
             else {
-                const final = Array(qtdRequisitada - conteudos.length).fill({
-                    titulo: '',
-                    conteudo: '',
-                    aba: 0
-                } as IConteudo)
-                setConteudos([...conteudos, ...final])
+                const novosConteudos = [...conteudos]
+                while (novosConteudos.length < qtdRequisitada) {
+                    novosConteudos.push({
+                        conteudo: '',
+                        titulo: ''
+                    } as IConteudo)
+                }
+                setConteudos([...novosConteudos])
+
             }
         }
     }
@@ -76,14 +78,18 @@ export function ConteudoForm({ onSubmit }: IConteudoForm) {
      */
     function submit(e: FormEvent) {
         e.preventDefault()
+        conteudos.forEach( (conteudo, index) => {
+            check(conteudo.conteudo, required, `conteudo_aba_conteudo_${index}`)
+            check(conteudo.titulo, required, `conteudo_aba_titulo_${index}`)
+        })
+
         const optionsOk = conteudos
                 .map( ( conteudo, index ) =>
-                    check(conteudo.titulo, required, `conteudo_aba_titulo_${index}`)
-                    && check(conteudo.conteudo, required, `conteudo_aba_conteudo_${index}`))
+                    check(conteudo.conteudo, required, `conteudo_aba_conteudo_${index}`)
+                    && check(conteudo.titulo, required, `conteudo_aba_titulo_${index}`) )
                 .every(obj => obj)
 
         if (optionsOk) {
-            conteudos.forEach( ( item, index ) => item.aba = index)
             onSubmit( conteudos )
         }
     }
@@ -102,12 +108,16 @@ export function ConteudoForm({ onSubmit }: IConteudoForm) {
         <div key={`conteudo_aba_${index}`}>
             <label>Título</label>
             <input type="text" value={conteudo.titulo}
+                   id={`conteudo_aba_titulo_${index}`}
+                   key={`conteudo_aba_titulo_${index}`}
                    onChange={e => mudarTituloAba(index, e.target.value)}
                    onBlur={e => touched[`conteudo_aba_titulo_${index}`] && check(e.target.value, required, `conteudo_aba_titulo_${index}`)}
             />
             <div className="error">{ errors[`conteudo_aba_titulo_${index}`] }</div>
             <label>Conteúdo</label>
             <textarea value={conteudo.conteudo}
+                      key={`conteudo_aba_conteudo_${index}`}
+                      id={`conteudo_aba_conteudo_${index}`}
                       onChange={e => mudarConteudoAba(index, e.target.value)}
                       onBlur={e => touched[`conteudo_aba_conteudo_${index}`] && check(e.target.value, required, `conteudo_aba_conteudo_${index}`)}
             >

@@ -1,13 +1,15 @@
 import './ConteudoTab.css'
 import {IConteudo} from "../../models/IConteudo";
 
-export function ConteudoTab(prop: IConteudo) {
-    const conteudoElm =  (
+export interface IConteudoTab {
+    abaAtual: number
+    conteudos: IConteudo[]
+}
+export function ConteudoTab(prop: IConteudoTab) {
+    return (
         <div className='conteudo'>
-            <p>{ prop.conteudo }</p>
+            <p>{ prop.conteudos[prop.abaAtual] ? prop.conteudos[prop.abaAtual].conteudo : '' }</p>
         </div>
     )
-    return (
-        { conteudoElm }
-    )
+
 }

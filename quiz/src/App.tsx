@@ -1,55 +1,43 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, {createContext} from 'react';
 import './App.css';
-import { Question, QuestionProps } from './components/Question';
-import { QuestionForm } from './components/QuestionForm';
-import { Quiz } from './components/Quiz';
-import { useQuestions } from './hooks/question-hook';
 import {ConteudoForm} from "./components/ConteudoForm/ConteudoForm";
 import {IConteudo} from "./models/IConteudo";
+import {MainTab} from "./components/MainTab/MainTab";
+import {useConteudo} from "./hooks/conteudo-hook";
 
-let emptyQuestion: QuestionProps = {
-  statement: 'asfsdfsdf',
-  options: ['asfhsdf', 'sdkgsdjf']
-}
+const ConteudosContext = createContext<IConteudo[]>([])
 
-// const QuestionContext = createContext(emptyQuestion)
-
-const QuestionsContext = createContext<QuestionProps[]>([])
-
-// function QuestionWrapper() {
-//   const question = useContext(QuestionContext)
-//   return <Question {...question} />
+// function QuestionList() {
+//   const qstList = useContext(QuestionsContext)
+//   return <div>
+//     { qstList.map(qst => <Question {...qst} />) }
+//   </div>
 // }
 
-
-function QuestionList() {
-  const qstList = useContext(QuestionsContext)
-  return <div>
-    { qstList.map(qst => <Question {...qst} />) }
-  </div>
-}
-
 function App() {
-  const { questions, createQuestion, deleteQuestion } = useQuestions()
-  // const [question, setQuestion] = useState(emptyQuestion)
+    const {conteudos, addConteudo } = useConteudo()
+    // const { questions, createQuestion, deleteQuestion } = useQuestions()
+    // const [question, setQuestion] = useState(emptyQuestion)
 
-  function updateQuestion(qst: QuestionProps) {
-    createQuestion(qst)
-  }
-
-  // const questionList = questions.map(qst => <Question {...qst} />)
-
-    function onSubmit(conteudos: IConteudo[]){
-      console.log(conteudos)
+    function onSubmit(conteudosEnviados: IConteudo[]) {
+        addConteudo(conteudosEnviados)
     }
 
-  return (
-      <ConteudoForm onSubmit={onSubmit} />
-      // <QuestionsContext.Provider value={questions}>
-      //   <QuestionForm onSubmit={updateQuestion} />
-      //   <QuestionList />
-      // </QuestionsContext.Provider>
-  )
+    // const questionList = questions.map(qst => <Question {...qst} />)
+
+
+
+    return (
+        <ConteudosContext.Provider value={conteudos}>
+            <ConteudoForm onSubmit={onSubmit} />
+            <MainTab conteudos={conteudos}></MainTab>
+        </ConteudosContext.Provider>
+
+        // <QuestionsContext.Provider value={questions}>
+        //   <QuestionForm onSubmit={updateQuestion} />
+        //   <QuestionList />
+        // </QuestionsContext.Provider>
+    )
 }
 
 export default App;

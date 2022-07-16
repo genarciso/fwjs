@@ -6,6 +6,6 @@ export default {
     component: MainTab,
 } as ComponentMeta<typeof MainTab>
 
-const Template: ComponentStory<typeof MainTab> = () => <MainTab />
+const Template: ComponentStory<typeof MainTab> = () => <MainTab conteudos={ [] } />
 
 export const Main = Template.bind({})
