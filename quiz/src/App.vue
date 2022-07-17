@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import Main from "./components/Main/Main.vue";
-
+import QuestionList from './components/QuestionList.vue'
+// import Question from './components/Question.vue'
+// import { questionStore } from './store/question.store'
 </script>
 
 <template>
-  <Main></Main>
+  <QuestionList></QuestionList>
 </template>
 
 <style>
