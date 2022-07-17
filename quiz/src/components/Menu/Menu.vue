@@ -5,7 +5,7 @@
         <button :class="{selected: index === selecionado}"
                 :key="{index}"
                 @click="$emit('onSelection', index);">
-          {{conteudos[index].titulo}}
+          {{conteudo.titulo}}
         </button>
       </li>
     </ul>
