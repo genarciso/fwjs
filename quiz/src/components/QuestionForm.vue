@@ -20,7 +20,7 @@
 
     <div v-if="qstType === 'choice'">
       <label>Número de opções</label>
-      <input type="number" :value="options.length" @change="changeNumOptions(($event.target as HTMLInputElement).value)" />
+      <input type="number" :value="options.length" @change="changeNumOptions($event.target.value)" />
 
       <div className="error">{{ errors.numOptions }}</div>
       <div v-for="(opt, i) in options" :key="`option_${i}`">

@@ -1,11 +1,11 @@
 <template>
   <nav class='header-menu'>
     <ul>
-      <li v-for="index in [0,1, 2, 3]" :key={index}>
-        <button :class="{selected: index === selected}"
+      <li v-for="(conteudo, index) in conteudos" :key={index}>
+        <button :class="{selected: index === selecionado}"
                 :key="{index}"
                 @click="$emit('onSelection', index);">
-          Tab {{ index+1 }}
+          {{conteudos[index].titulo}}
         </button>
       </li>
     </ul>
@@ -13,8 +13,11 @@
 </template>
 
 <script setup lang="ts">
+  import type {ConteudoModel} from "@/models/CoteundoModel";
+
   export interface MenuProps {
-    selected: number;
+    conteudos: ConteudoModel[]
+    selecionado: number;
   }
   export interface MenuEvents {
     (e: 'onSelection', val: number): void
