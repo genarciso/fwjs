@@ -2,13 +2,17 @@ import {reactive} from "vue";
 import type {ConteudoModel} from "@/models/CoteundoModel";
 
 export interface ConteudoStore {
-    conteudos: ConteudoModel[]
+    conteudosStore: ConteudoModel[]
     add: (conteudosNovos: ConteudoModel[]) => void
 }
 
 export const conteudoStore = reactive<ConteudoStore>({
-    conteudos: reactive<ConteudoModel[]>([]),
+    conteudosStore: reactive<ConteudoModel[]>([]),
+
     add(conteudosNovos: ConteudoModel[]) {
-        this.conteudos = [...conteudosNovos]
+        this.conteudosStore = []
+        conteudosNovos.forEach( conteudo =>
+            this.conteudosStore.push({...conteudo})
+        )
     }
 })

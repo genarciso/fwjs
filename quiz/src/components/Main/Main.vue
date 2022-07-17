@@ -4,11 +4,11 @@
   </div>
   <div id = "main">
     <Menu @on-selection="select"
-          :conteudos="conteudoStore.conteudos"
+          :conteudos="conteudoStore.conteudosStore"
           :selecionado="abaSelecionada"
     ></Menu>
-    <Painel :conteudo="conteudoStore.conteudos[abaSelecionada] ?
-    conteudoStore.conteudos[abaSelecionada].conteudo : ''"> </Painel>
+    <Painel :conteudo="conteudoStore.conteudosStore[abaSelecionada] ?
+    conteudoStore.conteudosStore[abaSelecionada].conteudo : ''"> </Painel>
   </div>
 </template>
 
@@ -27,7 +27,7 @@ const abaSelecionada = ref(0)
   }
 
 function addConteudos(conteudos: ConteudoModel[]) {
-  conteudoStore.add(conteudos)
+  conteudoStore.add([...conteudos])
 }
 </script>
 
