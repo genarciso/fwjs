@@ -1,12 +1,12 @@
 <h2>{ statement }</h2>
 <div class="options">
   {#each options as option, index (option)}
-  <button
-    class={ index === selection ? 'selected' : '' }
-    on:click={ e => clicked(index) } >
-    { option }
-  </button>
-{/each}
+    <button
+            class={ index === selection ? 'selected' : '' }
+            on:click={ e => clicked(index) } >
+      { option }
+    </button>
+  {/each}
 
 </div>
 
@@ -15,7 +15,7 @@
 
   export let statement: string = 'Enunciado da questão'
   export let options: string[] = []
-  export let selection: number
+  export let selection: number | null = null
 
   const dispatcher = createEventDispatcher()
 
