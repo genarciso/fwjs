@@ -1,0 +1,18 @@
+info @storybook/svelte v6.5.0
+info 
+info => Cleaning outputDir: /tmp/chromatic--12841-lJUGNBdXYnD3
+info => Loading presets
+undefined:1
+
+
+SyntaxError: /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/package.json: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at Object.readFileSync (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/jsonfile/index.js:52:17)
+    at getMonorepoType (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/@storybook/telemetry/dist/cjs/get-monorepo-type.js:46:38)
+    at _callee2$ (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/@storybook/telemetry/dist/cjs/storybook-metadata.js:210:65)
+    at tryCatch (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/regenerator-runtime/runtime.js:119:21)
+    at asyncGeneratorStep (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/@storybook/telemetry/dist/cjs/storybook-metadata.js:72:103)
+    at _next (/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/@storybook/telemetry/dist/cjs/storybook-metadata.js:74:194)
+    at /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/node_modules/@storybook/telemetry/dist/cjs/storybook-metadata.js:74:364
