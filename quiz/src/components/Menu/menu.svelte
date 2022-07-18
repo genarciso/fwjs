@@ -1,10 +1,10 @@
 <nav class='header-menu'>
     <ul>
-        {#each [0,1, 2, 3] as index }
+        {#each conteudos as conteudo, index }
             <li>
-                <button class={index === selected ? 'selected' : ''}
+                <button class={index === selecionado ? 'selected' : ''}
                         on:click={() => onClicked(index) }>
-                    Tab { index + 1 }
+                    {conteudo.titulo}
                 </button>
             </li>
         {/each}
@@ -13,12 +13,14 @@
 
 <script lang="ts">
     import {createEventDispatcher} from "svelte";
+    import type {ConteudoModel} from "../../models/ConteudoForm";
 
-    export let selected: number;
+    export let selecionado: number
+    export let conteudos: ConteudoModel[] = []
     const dispatcher = createEventDispatcher()
 
     function onClicked(idx: number) {
-        selected = idx
+        selecionado = idx
         dispatcher('selection', idx)
     }
 </script>

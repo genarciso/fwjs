@@ -1,26 +1,9 @@
 <div class="conteudo">
-    <p>{ aoTrocarConteudo(abaAtual) }</p>
+    <p>{ conteudo }</p>
 </div>
 
 <script lang="ts">
-
-    export let abaAtual: number;
-    let conteudo: string;
-
-    function aoTrocarConteudo(aba: number) {
-        switch( aba ) {
-            case 0:
-                return conteudo = "Conteudo do usuario 1"
-            case 1:
-                return conteudo = "Conteudo do usuario 2"
-            case 2:
-                return conteudo = "Conteudo do usuario 3"
-            case 3:
-                return conteudo = "Conteudo do usuario 4"
-            default:
-                return conteudo = "Conteudo qualquer"
-        }
-    }
+    export let conteudo: string = "";
 </script>
 
 <style>
