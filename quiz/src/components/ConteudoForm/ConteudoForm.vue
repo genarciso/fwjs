@@ -90,10 +90,12 @@ function mudarNumConteudo(value: string) {
 
 function verificarTituloAba(index: number) {
   touchValidation.touch(`conteudo_aba_titulo_${index}`, true)
+  errorValidation.check(conteudos[index].conteudo, required, `conteudo_aba_titulo_${index}`)
 }
 
 function verificarConteudoAba(index: number) {
   touchValidation.touch(`conteudo_aba_conteudo_${index}`, true)
+  errorValidation.check(conteudos[index].conteudo, required, `conteudo_aba_conteudo_${index}`)
 }
 
 /**
