@@ -4,12 +4,7 @@ export default {
     title: 'Tab/Painel',
     component: painel,
     argTypes: {
-        abaAtual: {
-            control: {
-                type: 'radio',
-                options: [0, 1, 2, 3]
-            }
-        }
+        conteudo: { control: 'text' }
     }
 };
 

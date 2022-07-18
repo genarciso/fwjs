@@ -1,30 +1,28 @@
 <div>
-    <div>
-        <ConteudoForm on:submit={event => addConteudos(event.detail)}></ConteudoForm>
-    </div>
     <div id = "main">
         <Menu on:selection={event => select(event.detail)}
-              conteudos={ $conteudoStore }
+              conteudos={ conteudos }
               selecionado={ abaSelecionada }
         ></Menu>
-        <Painel conteudo={$conteudoStore[abaSelecionada] ?
-    $conteudoStore[abaSelecionada].conteudo : ''}> </Painel>
+        <Painel conteudo={conteudos[abaSelecionada] ?
+    conteudos[abaSelecionada].conteudo : ''}> </Painel>
     </div>
 </div>
 
 <script lang="ts">
-    import ConteudoForm from '../ConteudoForm/conteudo-form.svelte'
     import Menu from '../Menu/menu.svelte'
     import Painel from '../Painel/painel.svelte'
-    import type {ConteudoModel} from "../../models/ConteudoForm";
-    import {conteudoStore} from "../../store/conteudo.store";
 
+    export const conteudos = [{
+        titulo: 'Tab 1',
+        conteudo: 'Conteudo 1'
+    }, {
+        titulo: 'Tab 2',
+        conteudo: 'Conteudo 2'
+    }]
     let abaSelecionada = 0
     function select(optionIndex: number) {
         abaSelecionada = optionIndex
-    }
-    function addConteudos(conteudos: ConteudoModel[]) {
-        conteudoStore.addConteudos([...conteudos])
     }
 </script>
 

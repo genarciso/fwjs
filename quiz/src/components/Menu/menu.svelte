@@ -13,10 +13,9 @@
 
 <script lang="ts">
     import {createEventDispatcher} from "svelte";
-    import type {ConteudoModel} from "../../models/ConteudoForm";
 
     export let selecionado: number
-    export let conteudos: ConteudoModel[] = []
+    export let conteudos: [{[name: string]: string}] = []
     const dispatcher = createEventDispatcher()
 
     function onClicked(idx: number) {
