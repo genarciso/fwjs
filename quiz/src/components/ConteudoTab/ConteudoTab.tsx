@@ -1,9 +1,8 @@
 import './ConteudoTab.css'
-import {IConteudo} from "../../models/IConteudo";
 
 export interface IConteudoTab {
     abaAtual: number
-    conteudos: IConteudo[]
+    conteudos: [{[name: string]: string}]
 }
 export function ConteudoTab(prop: IConteudoTab) {
     return (

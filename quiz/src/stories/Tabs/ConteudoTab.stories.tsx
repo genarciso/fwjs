@@ -1,4 +1,3 @@
-import {MainTab} from "../../components/MainTab/MainTab";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {ConteudoTab} from "../../components/ConteudoTab/ConteudoTab";
 
@@ -6,10 +5,10 @@ export default {
     title: 'Tab/Conteudo',
     component: ConteudoTab,
     argTypes: {
-        currentTab: {
+        abaAtual: {
             control: {
                 type: 'radio',
-                options: [0, 1, 2, 3]
+                options: [0, 1]
             }
         }
     }
@@ -18,3 +17,9 @@ export default {
 const Template: ComponentStory<typeof ConteudoTab> = (args) => <ConteudoTab {...args} />
 
 export const Conteudo = Template.bind({})
+Conteudo.args = {
+    conteudos: [{
+        titulo: "Tab 1",
+        conteudo: "Conteudo 1"
+    }]
+}
