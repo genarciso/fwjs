@@ -13,14 +13,13 @@ export default {
 
 const Template: ComponentStory<typeof MenuTab> = (args) => <MenuTab {...args} />
 
-const conteudosTeste = [{
-    "titulo": 'Tab 1',
-    "conteudo": 'Conteudo 1'
-}, {
-    "titulo": 'Tab 2',
-    "conteudo": 'Conteudo 2'
-}]
 export const Menu = Template.bind({})
 Menu.args = {
-    conteudos: conteudosTeste
+    conteudos: [{
+        titulo: 'Tab 1',
+        conteudo: 'Conteudo 1'
+    }, {
+        titulo: 'Tab 2',
+        conteudo: 'Conteudo 2'
+    }]
 }
