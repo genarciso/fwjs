@@ -11,17 +11,7 @@ export class MenuComponent {
   @Input() conteudos: ConteudoAba[] = []
   @Output() selecao = new EventEmitter<number>()
 
-  constructor() {
-    this.conteudos.push({
-      titulo: "Tab 1",
-      conteudo: "Conteudo 1",
-      aba: 0
-    }, {
-      titulo: "Tab 2",
-      conteudo: "Conteudo 2",
-      aba: 0
-    } )
-  }
+  constructor() { }
 
 
 }

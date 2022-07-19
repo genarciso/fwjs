@@ -947,7 +947,7 @@
         },
         {
             "name": "MainComponent",
-            "id": "component-MainComponent-d2e93569f22867834a22ffc91d675f928bed7de29150543c124d83ed40bc8bce5097d034e00e90a5753c56cb75351adc65d5566eccdd055b4f6562cd5b9ec97c",
+            "id": "component-MainComponent-4eef83017c1dd78a827f883204ddb67b8db51d91d83c216606053f475a72a09c4e2f192926041d0a285921be025ff00e0c15f42889a229b2342c2b34540b2cd3",
             "file": "src/app/components/main/main.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -974,11 +974,11 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 11
+                    "line": 19
                 },
                 {
                     "name": "conteudos",
-                    "defaultValue": "[]",
+                    "defaultValue": "[{\n    titulo: \"Tab 1\",\n    conteudo: \"Conteudo 1\",\n    aba: 0\n  }, {\n    titulo: \"Tab 2\",\n    conteudo: \"Conteudo 2\",\n    aba: 0\n  }]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ConteudoAba[]",
@@ -1001,7 +1001,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 26,
+                    "line": 24,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1024,7 +1024,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component} from '@angular/core';\nimport {ConteudoAba} from \"../../services/conteudo.service\";\n\n@Component({\n  selector: 'app-main',\n  templateUrl: './main.component.html',\n  styleUrls: ['./main.component.css']\n})\nexport class MainComponent {\n  conteudos: ConteudoAba[] = []\n  abaSelecionada: number = 0\n\n\n  constructor() {\n    this.conteudos.push({\n      titulo: \"Tab 1\",\n      conteudo: \"Conteudo 1\",\n      aba: 0\n    }, {\n      titulo: \"Tab 2\",\n      conteudo: \"Conteudo 2\",\n      aba: 0\n    } )\n  }\n\n  select(optionIndex: number) {\n    this.abaSelecionada = optionIndex\n  }\n\n}\n",
+            "sourceCode": "import {Component} from '@angular/core';\nimport {ConteudoAba} from \"../../services/conteudo.service\";\n\n@Component({\n  selector: 'app-main',\n  templateUrl: './main.component.html',\n  styleUrls: ['./main.component.css']\n})\nexport class MainComponent {\n  conteudos: ConteudoAba[] = [{\n    titulo: \"Tab 1\",\n    conteudo: \"Conteudo 1\",\n    aba: 0\n  }, {\n    titulo: \"Tab 2\",\n    conteudo: \"Conteudo 2\",\n    aba: 0\n  }]\n  abaSelecionada: number = 0\n\n\n  constructor() {}\n\n  select(optionIndex: number) {\n    this.abaSelecionada = optionIndex\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1039,13 +1039,13 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 11
+                "line": 19
             },
             "templateData": "<div id = \"main\">\n  <app-menu (selecao)=\"select($event)\" [conteudos]=\"conteudos\"></app-menu>\n  <app-painel [conteudo]=\"conteudos[abaSelecionada].conteudo\"> </app-painel>\n</div>\n"
         },
         {
             "name": "MenuComponent",
-            "id": "component-MenuComponent-6c469d05e9be520940741b75137b89ea756b01c2adcc3a759fdeeafaaa9e7126f615298343ad337c2bc318ffda8dbdc2cd931dd7b44c9f2e94c78e88cb88d35a",
+            "id": "component-MenuComponent-a2d2604c37bb353db3012ecd92d816d6da19396a1bfb5f1b0dd3b925ee092a6ffd83c2f45c1dc646cedc533517c1794c60a4f8f06f3d77c5d3ed338cd13396b5",
             "file": "src/app/components/menu/menu.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1102,7 +1102,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, EventEmitter, Input, Output} from '@angular/core';\nimport {ConteudoAba} from \"../../services/conteudo.service\";\n\n@Component({\n  selector: 'app-menu',\n  templateUrl: './menu.component.html',\n  styleUrls: ['./menu.component.css']\n})\nexport class MenuComponent {\n  selecionado: number = 0\n  @Input() conteudos: ConteudoAba[] = []\n  @Output() selecao = new EventEmitter<number>()\n\n  constructor() {\n    this.conteudos.push({\n      titulo: \"Tab 1\",\n      conteudo: \"Conteudo 1\",\n      aba: 0\n    }, {\n      titulo: \"Tab 2\",\n      conteudo: \"Conteudo 2\",\n      aba: 0\n    } )\n  }\n\n\n}\n",
+            "sourceCode": "import {Component, EventEmitter, Input, Output} from '@angular/core';\nimport {ConteudoAba} from \"../../services/conteudo.service\";\n\n@Component({\n  selector: 'app-menu',\n  templateUrl: './menu.component.html',\n  styleUrls: ['./menu.component.css']\n})\nexport class MenuComponent {\n  selecionado: number = 0\n  @Input() conteudos: ConteudoAba[] = []\n  @Output() selecao = new EventEmitter<number>()\n\n  constructor() { }\n\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1877,21 +1877,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "Large",
@@ -2098,18 +2098,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -2120,6 +2108,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
