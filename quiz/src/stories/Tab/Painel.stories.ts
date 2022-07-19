@@ -5,10 +5,9 @@ export default {
   title: 'Tab/Painel',
   component: PainelComponent,
   argTypes: {
-    aba: {
+    conteudo: {
       control: {
-        type: 'radio',
-        options: [0, 1, 2, 3]
+        type: 'text'
       }
     }
   }
@@ -20,5 +19,5 @@ const Template: Story<PainelComponent> = (args) => ({
 
 export const Painel = Template.bind({})
 Painel.args = {
-  aba: 0
+  conteudo: 'Teste'
 }

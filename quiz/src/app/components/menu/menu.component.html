@@ -1,9 +1,9 @@
 <nav class='header-menu'>
   <ul>
-    <li *ngFor="let aba of conteudoService.painelInfo.abas, index as i">
+    <li *ngFor="let item of conteudos, index as i">
       <button [ngClass]="{selected: i === selecionado}"
               (click)="selecionado = i; selecao.emit(i)">
-         {{ conteudoService.painelInfo.abas[i].titulo }}
+         {{ item.titulo }}
       </button>
     </li>
   </ul>

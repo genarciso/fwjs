@@ -14,15 +14,7 @@ export default {
       declarations: [MenuComponent, PainelComponent],
       imports: [CommonModule, BrowserModule]
     }),
-  ],
-  argTypes: {
-    abaSelecionada: {
-      control: {
-        type: 'radio',
-        options: [0, 1, 2, 3]
-      }
-    }
-  }
+  ]
 } as Meta
 
 const Template: Story<MainComponent> = (args: MainComponent) => ({

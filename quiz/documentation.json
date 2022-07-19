@@ -36,22 +36,489 @@
             "methods": []
         },
         {
-            "name": "Question",
-            "id": "interface-Question-ca887447cb7bc1e4d070a1b89a21ee4baeeed7d0fb271f18c789ea1c2b06728af2cbe197507c219fd3a5623b8dc5262dadd4ff6d345b6ce5db0739caac8a9333",
-            "file": "src/app/components/question.component.ts",
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\"\n\nexport interface Question {\n  statement: string  // enunciado da questão\n  options: string[]  // opções da questão\n  selection?: number // índice da opção selecionada, se houver\n}\n\n@Component({\n  selector: 'app-question',\n  template: `\n    <h2>{{ statement }}</h2>\n    <button *ngFor=\"let option of options; let i = index\"\n      [ngClass]=\"{ selected: i === selection }\"\n      (click)=\"onSelection.emit(i)\">\n      {{ option }}\n    </button>\n  `,\n  styles: [`\n    h2 {\n      font-weight: normal;\n      font-size: 20pt;\n      margin-top: 0;\n    }\n    button {\n      margin-right: 10px;\n      background-color: #ccc;\n      border: 1px solid rgb(118, 118, 118);\n      border-radius: 3px;\n      padding: 2px 5px;\n    }\n    .selected {\n      font-weight: bold;\n      background-color: #aaa;\n    }\n  `]\n})\nexport class QuestionComponent {\n   @Input() statement!: string    // enunciado da questão\n   @Input() options!: string[]    // opções da questão\n   @Input() selection?: number    // índice da opção selecionada, se houver\n   @Output() onSelection = new EventEmitter<number>() // quando o usuário selecionar uma opção, passa seu índice\n}",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "ConteudoService",
+            "id": "injectable-ConteudoService-a6113c599073cc09bbe2c7f3c94c4c16ea27abb781d892a0d08736605ed56db73aa34b87c8f0f5c7a638347641db944687d56805c7e7ce9fc5661deb4a5bb16e",
+            "file": "src/app/services/conteudo.service.ts",
+            "properties": [
+                {
+                    "name": "painelInfo",
+                    "defaultValue": "new PainelInfo()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "PainelInfo",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                }
+            ],
+            "methods": [
+                {
+                    "name": "add",
+                    "args": [
+                        {
+                            "name": "painelInfo",
+                            "type": "PainelInfo",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 24,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "painelInfo",
+                            "type": "PainelInfo",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\n\nexport class PainelInfo {\n  constructor(\n    public qtdAbas: number = 1,   // Quantidade de abas que devem ter\n    public abas: ConteudoAba[] = [new ConteudoAba()]    // Array com o conteudo das abas\n  ) {}\n}\n\nexport class ConteudoAba {\n  constructor(\n    public titulo: string = '',             // titulo da aba\n    public conteudo: string = '',           // conteúdo da aba\n    public aba: number = 0                  // aba no qual pertence\n  ) {}\n}\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ConteudoService {\n  painelInfo: PainelInfo = new PainelInfo()\n\n  add(painelInfo: PainelInfo) {\n    this.painelInfo = painelInfo\n  }\n}\n",
+            "type": "injectable"
+        },
+        {
+            "name": "QuestionService",
+            "id": "injectable-QuestionService-1df53f976854a7b667ccbc9aa6eda11f4a002b7608eb89cb284109a177ee91025694db9d76f731baf569ecb9c7da7290849b36e4620529bc9f85db74e4bdb5ba",
+            "file": "src/app/services/question.service.ts",
+            "properties": [
+                {
+                    "name": "questions",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Question[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                }
+            ],
+            "methods": [
+                {
+                    "name": "add",
+                    "args": [
+                        {
+                            "name": "question",
+                            "type": "Question",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "question",
+                            "type": "Question",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "delete",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "update",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "question",
+                            "type": "Question",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "question",
+                            "type": "Question",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\n\nexport class Question {\n  selection?: number // índice da opção selecionada, se houver\n\n  constructor(\n    public statement: string = '',             // enunciado obrigatório\n    public type: 'text' | 'choice' = 'text',   // tipo default\n    public options: string[] = ['sim', 'não'], // opções default\n  ) {}\n}\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class QuestionService {\n  questions: Question[] = []\n\n  add(question: Question) {\n    this.questions.push(question)\n  }\n\n  delete(index: number) {\n    this.questions.splice(index, 1)\n  }\n\n  update(index: number, question: Question) {\n    this.questions[index] = question\n  }\n}\n",
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [
+        {
+            "name": "ConteudoAba",
+            "id": "class-ConteudoAba-a6113c599073cc09bbe2c7f3c94c4c16ea27abb781d892a0d08736605ed56db73aa34b87c8f0f5c7a638347641db944687d56805c7e7ce9fc5661deb4a5bb16e",
+            "file": "src/app/services/conteudo.service.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\n\nexport class PainelInfo {\n  constructor(\n    public qtdAbas: number = 1,   // Quantidade de abas que devem ter\n    public abas: ConteudoAba[] = [new ConteudoAba()]    // Array com o conteudo das abas\n  ) {}\n}\n\nexport class ConteudoAba {\n  constructor(\n    public titulo: string = '',             // titulo da aba\n    public conteudo: string = '',           // conteúdo da aba\n    public aba: number = 0                  // aba no qual pertence\n  ) {}\n}\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ConteudoService {\n  painelInfo: PainelInfo = new PainelInfo()\n\n  add(painelInfo: PainelInfo) {\n    this.painelInfo = painelInfo\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "titulo",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    },
+                    {
+                        "name": "conteudo",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    },
+                    {
+                        "name": "aba",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "titulo",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "conteudo",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "aba",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "aba",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "conteudo",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "titulo",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "PainelInfo",
+            "id": "class-PainelInfo-a6113c599073cc09bbe2c7f3c94c4c16ea27abb781d892a0d08736605ed56db73aa34b87c8f0f5c7a638347641db944687d56805c7e7ce9fc5661deb4a5bb16e",
+            "file": "src/app/services/conteudo.service.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\n\nexport class PainelInfo {\n  constructor(\n    public qtdAbas: number = 1,   // Quantidade de abas que devem ter\n    public abas: ConteudoAba[] = [new ConteudoAba()]    // Array com o conteudo das abas\n  ) {}\n}\n\nexport class ConteudoAba {\n  constructor(\n    public titulo: string = '',             // titulo da aba\n    public conteudo: string = '',           // conteúdo da aba\n    public aba: number = 0                  // aba no qual pertence\n  ) {}\n}\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ConteudoService {\n  painelInfo: PainelInfo = new PainelInfo()\n\n  add(painelInfo: PainelInfo) {\n    this.painelInfo = painelInfo\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "qtdAbas",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "1"
+                    },
+                    {
+                        "name": "abas",
+                        "type": "ConteudoAba[]",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "[new ConteudoAba()]"
+                    }
+                ],
+                "line": 3,
+                "jsdoctags": [
+                    {
+                        "name": "qtdAbas",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "1",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "abas",
+                        "type": "ConteudoAba[]",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "[new ConteudoAba()]",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "abas",
+                    "defaultValue": "[new ConteudoAba()]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ConteudoAba[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 6,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "qtdAbas",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 5,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "Question",
+            "id": "class-Question-1df53f976854a7b667ccbc9aa6eda11f4a002b7608eb89cb284109a177ee91025694db9d76f731baf569ecb9c7da7290849b36e4620529bc9f85db74e4bdb5ba",
+            "file": "src/app/services/question.service.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\n\nexport class Question {\n  selection?: number // índice da opção selecionada, se houver\n\n  constructor(\n    public statement: string = '',             // enunciado obrigatório\n    public type: 'text' | 'choice' = 'text',   // tipo default\n    public options: string[] = ['sim', 'não'], // opções default\n  ) {}\n}\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class QuestionService {\n  questions: Question[] = []\n\n  add(question: Question) {\n    this.questions.push(question)\n  }\n\n  delete(index: number) {\n    this.questions.splice(index, 1)\n  }\n\n  update(index: number, question: Question) {\n    this.questions[index] = question\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "statement",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    },
+                    {
+                        "name": "type",
+                        "type": "\"text\" | \"choice\"",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "'text'"
+                    },
+                    {
+                        "name": "options",
+                        "type": "string[]",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "['sim', 'não']"
+                    }
+                ],
+                "line": 4,
+                "jsdoctags": [
+                    {
+                        "name": "statement",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "type": "\"text\" | \"choice\"",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "'text'",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "options",
+                        "type": "string[]",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "['sim', 'não']",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
             "properties": [
                 {
                     "name": "options",
+                    "defaultValue": "['sim', 'não']",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string[]",
                     "optional": false,
                     "description": "",
-                    "line": 5
+                    "line": 9,
+                    "modifierKind": [
+                        123
+                    ]
                 },
                 {
                     "name": "selection",
@@ -60,55 +527,48 @@
                     "type": "number",
                     "optional": true,
                     "description": "",
-                    "line": 6
+                    "line": 4
                 },
                 {
                     "name": "statement",
+                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 4
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 165,
-            "methods": []
-        },
-        {
-            "name": "User",
-            "id": "interface-User-f2d396e3e11638191fa144308a82d2f1104ea1e428ec82cba7dfea5aeb62ea9db96aa9f8ecb8c07cee91673abb763eea3443c6c744e64a2b9fff57c7701f1b0b",
-            "file": "src/stories/User.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "export interface User {\n  name\n}\n",
-            "properties": [
+                    "line": 7,
+                    "modifierKind": [
+                        123
+                    ]
+                },
                 {
-                    "name": "name",
+                    "name": "type",
+                    "defaultValue": "'text'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "\"text\" | \"choice\"",
                     "optional": false,
                     "description": "",
-                    "line": 3
+                    "line": 8,
+                    "modifierKind": [
+                        123
+                    ]
                 }
             ],
+            "methods": [],
             "indexSignatures": [],
-            "kind": 165,
-            "methods": []
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
         }
     ],
-    "injectables": [],
-    "guards": [],
-    "interceptors": [],
-    "classes": [],
     "directives": [],
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-e5831340f2c0c70768fd3dbc4a3ca4754088d09bbccf9afea5b467e780510294a0175c0189d3f7e329bd93bd57104434c1a4b1a14d1c673f21913ca8db2e23ae",
+            "id": "component-AppComponent-bf657525c152ce996e696e2da54e62feb85bc2b257e8b106568a173a207e2b46b8b3282d5bffaa3655122beaf4493385587d39a38757f95270073e552eb0c711",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -132,7 +592,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core'\n\n@Component({\n  selector: 'app-root',\n  template: `<app-main></app-main>`\n})\nexport class AppComponent {\n}\n",
+            "sourceCode": "import {Component} from '@angular/core'\n\n@Component({\n  selector: 'app-root',\n  // template: `<app-quiz></app-quiz>`\n  // template: `<app-question-list></app-question-list>`\n  template: `<app-main></app-main>`\n})\n\nexport class AppComponent { }\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -262,6 +722,157 @@
             }
         },
         {
+            "name": "ConteudoFormComponent",
+            "id": "component-ConteudoFormComponent-ebf9d884194303663e8a80ab7019134e275abffaaccfe828762aa2adafbb516120e44c750fc37b73830af2a2866cc6e40d9e8be470c70183fe5a143607778dad",
+            "file": "src/app/components/conteudo-form/conteudo-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-conteudo-form",
+            "styleUrls": [
+                "./conteudo-form.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./conteudo-form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "NgForm",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'conteudoForm'"
+                        }
+                    ]
+                },
+                {
+                    "name": "numAbasForm",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "NgModel",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'numAbas'"
+                        }
+                    ]
+                },
+                {
+                    "name": "painelInfo",
+                    "defaultValue": "new PainelInfo()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "PainelInfo",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "qtdConteudos",
+                    "defaultValue": "[0]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "mudarQtdAbas",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "submit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit, ViewChild} from '@angular/core';\nimport {NgForm, NgModel} from \"@angular/forms\";\nimport {ConteudoAba, ConteudoService, PainelInfo} from \"../../services/conteudo.service\";\n\n@Component({\n  selector: 'app-conteudo-form',\n  templateUrl: './conteudo-form.component.html',\n  styleUrls: ['./conteudo-form.component.css']\n})\nexport class ConteudoFormComponent implements OnInit {\n  painelInfo: PainelInfo = new PainelInfo();\n  qtdConteudos: number[] = [0]\n  @ViewChild(\"conteudoForm\") form!: NgForm\n  @ViewChild(\"numAbas\") numAbasForm!: NgModel\n\n  constructor(private conteudoService: ConteudoService) {\n    this.qtdConteudos = Array(this.painelInfo.qtdAbas).fill(1).map((x,i)=>i++);\n  }\n\n  ngOnInit(): void {\n  }\n\n  mudarQtdAbas() {\n    if (this.numAbasForm.valid) {\n      this.qtdConteudos = Array(this.painelInfo.qtdAbas).fill(1).map((x, i) => i++);\n      while (this.painelInfo.abas.length < this.painelInfo.qtdAbas) {\n        this.painelInfo.abas.push(new ConteudoAba())\n      }\n      while (this.painelInfo.abas.length > this.painelInfo.qtdAbas) {\n        this.painelInfo.abas.pop()\n      }\n    }\n  }\n\n  submit() {\n    let abasCadastradas: ConteudoAba[]  = Object.entries(this.form.value).map(item => {\n      if (item[0].startsWith(\"abas-\")) {\n        return item[1] as ConteudoAba\n      }\n      return\n    }).filter(item => item) as ConteudoAba[]\n    abasCadastradas.forEach((aba, index) => aba.aba = index)\n    this.conteudoService.add({\n      abas: abasCadastradas,\n      qtdAbas: this.painelInfo.qtdAbas\n    } as PainelInfo)\n\n    this.form.resetForm()\n    this.painelInfo = new PainelInfo()\n    this.qtdConteudos = Array(this.painelInfo.qtdAbas).fill(1).map((x,i)=>i++);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".qst-form {\n  --label-size: 150px;\n  --label-margin: 10px;\n  --label-width: calc(var(--label-size) + var(--label-margin));\n  --border-size: 1px;\n  --border-color: #ccc;\n  --border-radius: 5px;\n  --input-padding: 5px;\n  --input-number-size: 30pt;\n  padding: 20px;\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\n}\n.qst-form label {\n  width: var(--label-size);\n  display: inline-block;\n  text-align: right;\n  font-weight: bold;\n  margin-right: var(--label-margin);\n  vertical-align: top;\n}\n.qst-form .errors {\n  font-style: italic;\n  font-size: 10pt;\n  color: red;\n  margin-left: var(--label-width);\n  height: 20pt;\n}\n.qst-form .buttons {\n  margin-top: 10px;\n  padding-top: 10px;\n  border-top: var(--border-size) solid var(--border-color);\n  display: flex;\n  justify-content: flex-end;\n}\n.qst-form textarea {\n  height: 100px;\n  margin-bottom: -5pt;\n}\n.qst-form input[type=\"submit\"] {\n  padding: 4pt 8pt;\n}\n.qst-form input[type=\"radio\"]:not(:first-child) {\n  margin-left: 20px;\n}\n.qst-form input[type=\"text\"],\n.qst-form input[type=\"number\"],\n.qst-form textarea {\n  border-radius: var(--border-radius);\n  border: var(--border-size) solid var(--border-color);\n  padding: var(--input-padding);\n}\n.qst-form input[type=\"text\"],\n.qst-form textarea {\n  width: calc(100% - (var(--label-width) + 2 * (var(--border-size) + var(--input-padding))));\n}\n.qst-form input[type=\"number\"] {\n  width: var(--input-number-size);\n}\n",
+                    "styleUrl": "./conteudo-form.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "conteudoService",
+                        "type": "ConteudoService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "conteudoService",
+                        "type": "ConteudoService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<form class=\"qst-form \" #conteudoForm=\"ngForm\" (ngSubmit)=\"conteudoForm.valid && submit()\">\n  <div>\n    <label>Número de abas</label>\n    <input type=\"number\"\n           name=\"numAbas\"\n           #numAbas=\"ngModel\"\n           [(ngModel)] =\"painelInfo.qtdAbas\"\n           (change)=\"mudarQtdAbas()\"\n            min=\"1\" max=\"5\" required\n    />\n    <div *ngIf=\"(numAbas.dirty || conteudoForm.submitted) && numAbas.errors\" class=\"errors\">\n      <div *ngIf=\"numAbas.errors['min']\">\n        Deve haver pelo menos uma aba\n      </div>\n      <div *ngIf=\"numAbas.errors['max']\">\n        Deve haver no máximo cinco opções\n      </div>\n      <div *ngIf=\"numAbas.errors['required']\">\n        É necessário preencher esse campo\n      </div>\n    </div>\n  </div>\n  <div *ngFor=\"let indice of qtdConteudos\" ngModelGroup=\"abas-{{indice}}\">\n    <div>\n      <label>Título</label>\n      <input type=\"text\"\n             #tituloConteudo=\"ngModel\"\n             name=\"titulo\"\n             [(ngModel)]=\"painelInfo.abas[indice].titulo\"\n             required\n      />\n      <div *ngIf=\"(tituloConteudo.touched || conteudoForm.submitted) && tituloConteudo.errors\" class=\"errors\">\n        <div *ngIf=\"tituloConteudo.errors['required']\">\n          É necessário informar o título da aba\n        </div>\n      </div>\n    </div>\n    <div>\n      <label>Conteúdo</label>\n      <textarea #cont=\"ngModel\"\n                [(ngModel)]=\"painelInfo.abas[indice].conteudo\"\n                name=\"conteudo\"\n                required>\n      </textarea>\n      <div *ngIf=\"(cont.touched || conteudoForm.submitted) && cont.errors\" class=\"errors\">\n        <div *ngIf=\"cont.errors['required']\">\n          É necessário informar o contéudo da aba\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <input type=\"submit\" value=\"Salvar\"/>\n</form>\n"
+        },
+        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-a557eec14f72c438a8033301f4d6ce023e0a1844a3b06ec2b38794a612acc31735ae78a5ee10071b230c8c20d699eb914554e69d07ade54adb371da8efb464cc",
             "file": "src/stories/header.component.ts",
@@ -336,7 +947,7 @@
         },
         {
             "name": "MainComponent",
-            "id": "component-MainComponent-185669149d5fb73e05a697e9a4829bd40c21e0b715713627ac2abfa543aa855104333b2e94f2f7c7c59af05badfb6afa4283e2e575067533d0533320e191821d",
+            "id": "component-MainComponent-bd920806e724fc7d8cd21bb4c37e8a170e1777fc09bebdbb52fa43b58b40fd2b7036d612a47e19ce8b10d37803595ec33ea946309a311ae39445bcecec6fd4c6",
             "file": "src/app/components/main/main.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -363,6 +974,16 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "conteudos",
+                    "defaultValue": "[{\n    titulo: \"Aba 1\",\n    conteudo: \"Conteudo 1\"\n  }, {\n    titulo: \"Aba 2\",\n    conteudo: \"Conteudo 2\"\n  }]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
                     "line": 9
                 }
             ],
@@ -380,7 +1001,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 11,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -403,7 +1024,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-main',\n  templateUrl: './main.component.html',\n  styleUrls: ['./main.component.css']\n})\nexport class MainComponent {\n  abaSelecionada: number = 0\n\n  select(optionIndex: number) {\n    this.abaSelecionada = optionIndex\n  }\n\n}\n",
+            "sourceCode": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-main',\n  templateUrl: './main.component.html',\n  styleUrls: ['./main.component.css']\n})\nexport class MainComponent {\n  conteudos = [{\n    titulo: \"Aba 1\",\n    conteudo: \"Conteudo 1\"\n  }, {\n    titulo: \"Aba 2\",\n    conteudo: \"Conteudo 2\"\n  }]\n  abaSelecionada: number = 0\n\n\n  constructor() {}\n\n  select(optionIndex: number) {\n    this.abaSelecionada = optionIndex\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -412,11 +1033,19 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div id = \"main\">\n  <app-menu (selection)=\"select($event)\"></app-menu>\n  <app-painel [aba]=\"abaSelecionada\"> </app-painel>\n</div>\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 16
+            },
+            "templateData": "<div id = \"main\">\n  <app-conteudo-form></app-conteudo-form>\n  <app-menu (selecao)=\"select($event)\" [conteudos]=\"conteudos\"></app-menu>\n  <app-painel [conteudo]=\"conteudos[abaSelecionada].conteudo\"> </app-painel>\n</div>\n"
         },
         {
             "name": "MenuComponent",
-            "id": "component-MenuComponent-29bb65b039feb46f349e0369ce7eb1c6e55c7f2696828803255674878e2a69749f926885671c4ef25cbfac40193a78133a8e0b2f8d899cfb326f39d52172bc40",
+            "id": "component-MenuComponent-f1c80c8c167c4da5100c632a5e6535223f318692290aa6b333ab6c6474f24fe8f741ec61d29cf7666ea496dd69e5ef31456eedd9521cb5dd4a73e59423421156",
             "file": "src/app/components/menu/menu.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -432,20 +1061,30 @@
                 "./menu.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [
+            "inputsClass": [
                 {
-                    "name": "selection",
-                    "defaultValue": "new EventEmitter<number>()",
+                    "name": "conteudos",
+                    "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 10,
+                    "type": "[literal type]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "selecao",
+                    "defaultValue": "new EventEmitter<number>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
                     "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [
                 {
-                    "name": "selected",
+                    "name": "selecionado",
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -463,7 +1102,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, EventEmitter, Output} from '@angular/core';\n\n@Component({\n  selector: 'app-menu',\n  templateUrl: './menu.component.html',\n  styleUrls: ['./menu.component.css']\n})\nexport class MenuComponent {\n  selected: number = 0;\n  @Output() selection = new EventEmitter<number>();\n\n}\n",
+            "sourceCode": "import {Component, EventEmitter, Input, Output} from '@angular/core';\n\n@Component({\n  selector: 'app-menu',\n  templateUrl: './menu.component.html',\n  styleUrls: ['./menu.component.css']\n})\nexport class MenuComponent {\n  selecionado: number = 0\n  @Input() conteudos: [{titulo: string, conteudo:string}] = []\n  @Output() selecao = new EventEmitter<number>()\n\n  constructor() { }\n\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -472,7 +1111,15 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<nav class='header-menu'>\n  <ul>\n    <li *ngFor=\"let index of [0,1, 2, 3]\">\n      <button [ngClass]=\"{selected: index === selected}\"\n              (click)=\"selected = index; selection.emit(index)\">\n        Tab {{ index+1 }}\n      </button>\n    </li>\n  </ul>\n</nav>\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 11
+            },
+            "templateData": "<nav class='header-menu'>\n  <ul>\n    <li *ngFor=\"let item of conteudos, index as i\">\n      <button [ngClass]=\"{selected: i === selecionado}\"\n              (click)=\"selecionado = i; selecao.emit(i)\">\n         {{ item.titulo }}\n      </button>\n    </li>\n  </ul>\n</nav>\n"
         },
         {
             "name": "PageComponent",
@@ -556,7 +1203,7 @@
         },
         {
             "name": "PainelComponent",
-            "id": "component-PainelComponent-d52200c733fb1dfd04880ff50e66f2556bd988731e09792fd26a1bc175896e54fc149bcc4ba16bcc19a5f9bce11c884394e18041da484d09e22f2bf593e716b8",
+            "id": "component-PainelComponent-ba6851472486a88c9f2ba11b0b262a6ff61be4594f3d0ebe06c9911833979dac95f45b6ea45ae46722f3928a45c70ab26b134bdceb0865a1850787a1ebe71ee5",
             "file": "src/app/components/painel/painel.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -574,12 +1221,12 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "aba",
-                    "defaultValue": "0",
+                    "name": "conteudo",
+                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 9,
-                    "type": "number",
+                    "type": "string",
                     "decorators": []
                 }
             ],
@@ -593,7 +1240,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, Input} from '@angular/core';\n\n@Component({\n  selector: 'app-painel',\n  templateUrl: './painel.component.html',\n  styleUrls: ['./painel.component.css']\n})\nexport class PainelComponent {\n  @Input() aba: number = 0\n}\n",
+            "sourceCode": "import {Component, Input} from '@angular/core';\n\n@Component({\n  selector: 'app-painel',\n  templateUrl: './painel.component.html',\n  styleUrls: ['./painel.component.css']\n})\nexport class PainelComponent {\n  @Input() conteudo: string = '';\n\n  constructor() {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -602,11 +1249,19 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"conteudo\" [ngSwitch]=\"aba\">\n  <p *ngSwitchCase=\"0\" >Conteudo do usuario 1</p>\n  <p *ngSwitchCase=\"1\" >Conteudo do usuario 2</p>\n  <p *ngSwitchCase=\"2\" >Conteudo do usuario 3</p>\n  <p *ngSwitchCase=\"3\" >Conteudo do usuario 4</p>\n  <p *ngSwitchDefault >Conteudo qualquer</p>\n</div>\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 9
+            },
+            "templateData": "<div class=\"conteudo\" >\n  <p>{{ conteudo }}</p>\n</div>\n"
         },
         {
             "name": "QuestionComponent",
-            "id": "component-QuestionComponent-ca887447cb7bc1e4d070a1b89a21ee4baeeed7d0fb271f18c789ea1c2b06728af2cbe197507c219fd3a5623b8dc5262dadd4ff6d345b6ce5db0739caac8a9333",
+            "id": "component-QuestionComponent-7499863634bc92a74052ab1ae9e2854891460eee4be569f7fc19a7c1f5b27ca7d2275e2354608eb2fa2ca0593d0b508334316efb4784dfa0263814ac3a4ab6c8",
             "file": "src/app/components/question.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -618,7 +1273,7 @@
             "styles": [
                 "\n    h2 {\n      font-weight: normal;\n      font-size: 20pt;\n      margin-top: 0;\n    }\n    button {\n      margin-right: 10px;\n      background-color: #ccc;\n      border: 1px solid rgb(118, 118, 118);\n      border-radius: 3px;\n      padding: 2px 5px;\n    }\n    .selected {\n      font-weight: bold;\n      background-color: #aaa;\n    }\n  "
             ],
-            "template": "<h2>{{ statement }}</h2>\n<button *ngFor=\"let option of options; let i = index\"\n  [ngClass]=\"{ selected: i === selection }\"\n  (click)=\"onSelection.emit(i)\">\n  {{ option }}\n</button>\n",
+            "template": "<h2>{{ statement }}</h2>\n<button *ngFor=\"let option of options; let i = index\"\n        [ngClass]=\"{ selected: i === selection }\"\n        (click)=\"onSelection.emit(i)\">\n  {{ option }}\n</button>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -626,7 +1281,7 @@
                     "name": "options",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
+                    "line": 34,
                     "type": "string[]",
                     "decorators": []
                 },
@@ -634,7 +1289,7 @@
                     "name": "selection",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 41,
+                    "line": 35,
                     "type": "number",
                     "decorators": []
                 },
@@ -642,7 +1297,7 @@
                     "name": "statement",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 39,
+                    "line": 33,
                     "type": "string",
                     "decorators": []
                 }
@@ -653,7 +1308,7 @@
                     "defaultValue": "new EventEmitter<number>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 42,
+                    "line": 36,
                     "type": "EventEmitter"
                 }
             ],
@@ -666,14 +1321,295 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\"\n\nexport interface Question {\n  statement: string  // enunciado da questão\n  options: string[]  // opções da questão\n  selection?: number // índice da opção selecionada, se houver\n}\n\n@Component({\n  selector: 'app-question',\n  template: `\n    <h2>{{ statement }}</h2>\n    <button *ngFor=\"let option of options; let i = index\"\n      [ngClass]=\"{ selected: i === selection }\"\n      (click)=\"onSelection.emit(i)\">\n      {{ option }}\n    </button>\n  `,\n  styles: [`\n    h2 {\n      font-weight: normal;\n      font-size: 20pt;\n      margin-top: 0;\n    }\n    button {\n      margin-right: 10px;\n      background-color: #ccc;\n      border: 1px solid rgb(118, 118, 118);\n      border-radius: 3px;\n      padding: 2px 5px;\n    }\n    .selected {\n      font-weight: bold;\n      background-color: #aaa;\n    }\n  `]\n})\nexport class QuestionComponent {\n   @Input() statement!: string    // enunciado da questão\n   @Input() options!: string[]    // opções da questão\n   @Input() selection?: number    // índice da opção selecionada, se houver\n   @Output() onSelection = new EventEmitter<number>() // quando o usuário selecionar uma opção, passa seu índice\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\"\n\n@Component({\n  selector: 'app-question',\n  template: `\n    <h2>{{ statement }}</h2>\n    <button *ngFor=\"let option of options; let i = index\"\n            [ngClass]=\"{ selected: i === selection }\"\n            (click)=\"onSelection.emit(i)\">\n      {{ option }}\n    </button>\n  `,\n  styles: [`\n    h2 {\n      font-weight: normal;\n      font-size: 20pt;\n      margin-top: 0;\n    }\n    button {\n      margin-right: 10px;\n      background-color: #ccc;\n      border: 1px solid rgb(118, 118, 118);\n      border-radius: 3px;\n      padding: 2px 5px;\n    }\n    .selected {\n      font-weight: bold;\n      background-color: #aaa;\n    }\n  `]\n})\nexport class QuestionComponent {\n  @Input() statement!: string    // enunciado da questão\n  @Input() options!: string[]    // opções da questão\n  @Input() selection?: number    // índice da opção selecionada, se houver\n  @Output() onSelection = new EventEmitter<number>() // quando o usuário selecionar uma opção, passa seu índice\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    h2 {\n      font-weight: normal;\n      font-size: 20pt;\n      margin-top: 0;\n    }\n    button {\n      margin-right: 10px;\n      background-color: #ccc;\n      border: 1px solid rgb(118, 118, 118);\n      border-radius: 3px;\n      padding: 2px 5px;\n    }\n    .selected {\n      font-weight: bold;\n      background-color: #aaa;\n    }\n  \n"
         },
         {
+            "name": "QuestionFormComponent",
+            "id": "component-QuestionFormComponent-29a06c7e0c14dce33a6757406e657cab0ba342d736cb64761cbc6801f6b8e8ccde337ccc5e60e0d16002a3ca668e610d7250be0ee2e7d35f9605d836b21cbe9e",
+            "file": "src/app/components/question-form/question-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-question-form",
+            "styleUrls": [
+                "./question-form.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./question-form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "question",
+                    "defaultValue": "new Question()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "Question",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onSubmit",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "NgForm",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "NgForm"
+                        }
+                    ]
+                },
+                {
+                    "name": "qstService",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "QuestionService",
+                    "optional": false,
+                    "description": "",
+                    "line": 15,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "submit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "trackByFn",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, ViewChild } from \"@angular/core\";\nimport { NgForm } from \"@angular/forms\";\nimport { Question, QuestionService } from \"../../services/question.service\";\n\n@Component({\n  selector: 'app-question-form',\n  templateUrl: './question-form.component.html',\n  styleUrls: ['./question-form.component.css']\n})\nexport class QuestionFormComponent {\n  @Input() question: Question = new Question()\n  @Output() onSubmit = new EventEmitter()\n  @ViewChild(NgForm) form!: NgForm\n\n  constructor(public qstService: QuestionService) {\n  }\n\n  submit() {\n    this.onSubmit.emit({\n      statement: this.question.statement,\n      type: this.question.type,\n      options: [...this.question.options]\n    })\n    this.form.reset()\n    this.question = new Question()\n  }\n\n  trackByFn(index: number) {\n    return index;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".qst-form {\n  --label-size: 150px;\n  --label-margin: 10px;\n  --label-width: calc(var(--label-size) + var(--label-margin));\n  --border-size: 1px;\n  --border-color: #ccc;\n  --border-radius: 5px;\n  --input-padding: 5px;\n  --input-number-size: 30pt;\n  padding: 20px;\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\n}\n.qst-form label {\n  width: var(--label-size);\n  display: inline-block;\n  text-align: right;\n  font-weight: bold;\n  margin-right: var(--label-margin);\n  vertical-align: top;\n}\n.qst-form .errors {\n  font-style: italic;\n  font-size: 10pt;\n  color: red;\n  margin-left: var(--label-width);\n  height: 20pt;\n}\n.qst-form .buttons {\n  margin-top: 10px;\n  padding-top: 10px;\n  border-top: var(--border-size) solid var(--border-color);\n  display: flex;\n  justify-content: flex-end;\n}\n.qst-form textarea {\n  height: 100px;\n  margin-bottom: -5pt;\n}\n.qst-form input[type=\"submit\"] {\n  padding: 4pt 8pt;\n}\n.qst-form input[type=\"radio\"]:not(:first-child) {\n  margin-left: 20px;\n}\n.qst-form input[type=\"text\"],\n.qst-form input[type=\"number\"],\n.qst-form textarea {\n  border-radius: var(--border-radius);\n  border: var(--border-size) solid var(--border-color);\n  padding: var(--input-padding);\n}\n.qst-form input[type=\"text\"],\n.qst-form textarea {\n  width: calc(100% - (var(--label-width) + 2 * (var(--border-size) + var(--input-padding))));\n}\n.qst-form input[type=\"number\"] {\n  width: var(--input-number-size);\n}\n",
+                    "styleUrl": "./question-form.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "qstService",
+                        "type": "QuestionService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 13,
+                "jsdoctags": [
+                    {
+                        "name": "qstService",
+                        "type": "QuestionService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<form class=\"qst-form \" #questionForm=\"ngForm\" (ngSubmit)=\"questionForm.valid && submit()\">\n  <div>\n    <label>Enunciado</label>\n    <textarea #stat=\"ngModel\"\n              [(ngModel)]=\"question.statement\"\n              name=\"statement\"\n              required minlength=\"3\">\n    </textarea>\n    <div *ngIf=\"stat.touched && stat.errors\" class=\"errors\">\n      <div *ngIf=\"stat.errors['required']\">\n        Este campo é necessário\n      </div>\n      <div *ngIf=\"stat.errors['minlength']\">\n        Digite pelo menos 3 caracteres\n      </div>\n    </div>\n  </div>\n\n  <div>\n    <label>Tipo da questão:</label>\n    <span>\n      <input type=\"radio\" value=\"choice\" name=\"qstType\" [(ngModel)]=\"question.type\" />Objetiva\n      <input type=\"radio\" value=\"text\" name=\"qstType\" [(ngModel)]=\"question.type\" />Textual\n    </span>\n  </div>\n\n  <div *ngIf=\"question.type === 'choice'\">\n    <label>Número de opções</label>\n    <input type=\"number\"\n           name=\"length\"\n           #numOptions=\"ngModel\"\n           [(ngModel)] =\"question.options.length\"\n           min=\"2\" max=\"5\"\n    />\n    <div *ngIf=\"numOptions.dirty && numOptions.errors\" class=\"errors\">\n      <div *ngIf=\"numOptions.errors['min']\">\n        Deve haver pelo menos duas opções\n      </div>\n      <div *ngIf=\"numOptions.errors['max']\">\n        Deve haver no máximo cinco opções\n      </div>\n    </div>\n\n    <div *ngFor=\"let o of question.options; index as i; trackBy: trackByFn\">\n      <label>Opção {{i + 1}}</label>\n      <input type=\"text\"\n             #qstOption=\"ngModel\"\n             name=\"option-{{i}}\"\n             [(ngModel)]=\"question.options[i]\"\n             required\n      />\n      <div *ngIf=\"qstOption.dirty && qstOption.errors\" class=\"errors\">\n        <div *ngIf=\"qstOption.errors['required']\">\n          Digite o texto da opção\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <input type=\"submit\" value=\"Cadastrar\" [disabled]=\"questionForm.invalid\" />\n</form>\n"
+        },
+        {
+            "name": "QuestionListComponent",
+            "id": "component-QuestionListComponent-9d5ba2d347aa2abb55b2445e9558ced8547d093811797ab52b6a70ae80f6f80f9bf0f074923028dc35cb53ab43198bbac2d11865eb1276427edb57a7f444dc0d",
+            "file": "src/app/components/question-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-question-list",
+            "styleUrls": [],
+            "styles": [
+                "\n    .box {\n      padding: 10px;\n      border: 1px solid #aaf;\n      border-radius: 5px;\n      margin: 10px;\n    }\n    .erase {\n      float: right;\n      z-index: 2;\n    }\n  "
+            ],
+            "template": "<app-question-form (onSubmit)=\"addQuestion($event)\"></app-question-form>\n<div class=\"box\" *ngFor=\"let question of questionService.questions; index as i\">\n  <button class=\"erase\" (click)=\"deleteQuestion(i)\">X</button>\n  <app-question\n    [statement]=\"question.statement\"\n    [options]=\"question.options\"\n  >\n  </app-question>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "questionService",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "QuestionService",
+                    "optional": false,
+                    "description": "",
+                    "line": 31,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "addQuestion",
+                    "args": [
+                        {
+                            "name": "question",
+                            "type": "Question",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "question",
+                            "type": "Question",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "deleteQuestion",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from \"@angular/core\";\nimport { Question, QuestionService } from \"../services/question.service\";\n\n@Component({\n  selector: 'app-question-list',\n  template: `\n    <app-question-form (onSubmit)=\"addQuestion($event)\"></app-question-form>\n    <div class=\"box\" *ngFor=\"let question of questionService.questions; index as i\">\n      <button class=\"erase\" (click)=\"deleteQuestion(i)\">X</button>\n      <app-question\n        [statement]=\"question.statement\"\n        [options]=\"question.options\"\n      >\n      </app-question>\n    </div>\n  `,\n  styles: [`\n    .box {\n      padding: 10px;\n      border: 1px solid #aaf;\n      border-radius: 5px;\n      margin: 10px;\n    }\n    .erase {\n      float: right;\n      z-index: 2;\n    }\n  `]\n})\nexport class QuestionListComponent {\n  constructor(public questionService: QuestionService) {}\n\n  addQuestion(question: Question) {\n    this.questionService.add(question)\n  }\n\n  deleteQuestion(index: number) {\n    this.questionService.delete(index)\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    .box {\n      padding: 10px;\n      border: 1px solid #aaf;\n      border-radius: 5px;\n      margin: 10px;\n    }\n    .erase {\n      float: right;\n      z-index: 2;\n    }\n  \n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "questionService",
+                        "type": "QuestionService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 30,
+                "jsdoctags": [
+                    {
+                        "name": "questionService",
+                        "type": "QuestionService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        },
+        {
             "name": "QuizComponent",
-            "id": "component-QuizComponent-d74da647d0b25b20d4acd315fa4a54bdd09c3bc97abbb5cb41d5b02236302948dd10428158b5baf16d162a6e3b222c906c58fbdb18e236503c9efac1e11d7312",
+            "id": "component-QuizComponent-de62f04181212a48f52bcf52c1d0605c7f13590d0eb5b50589d002d9ac0cee0ac92fac4759352d15f319b17bee93a54aaee79afcc0af47c6cded6aceeb66eb10",
             "file": "src/app/components/quiz.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -699,7 +1635,7 @@
                     "type": "Answer[]",
                     "optional": false,
                     "description": "",
-                    "line": 64
+                    "line": 66
                 },
                 {
                     "name": "currentOption",
@@ -708,7 +1644,7 @@
                     "type": "number | undefined",
                     "optional": false,
                     "description": "",
-                    "line": 63
+                    "line": 65
                 },
                 {
                     "name": "currentQuestion",
@@ -718,11 +1654,11 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 62
+                    "line": 64
                 },
                 {
                     "name": "questions",
-                    "defaultValue": "[\n    {\n      statement: 'Enunciado da 1ª questão',\n      options: ['opção 1.1', 'opção 1.2', 'opção 1.3', 'opção 1.4']\n    },\n    {\n      statement: 'Enunciado da 2ª questão',\n      options: ['opção 2.1', 'opção 2.2', 'opção 2.3', 'opção 2.4']\n    },\n  ]",
+                    "defaultValue": "[\n    new Question(\n      'Enunciado da 1ª questão',\n      'choice',\n      ['opção 1.1', 'opção 1.2', 'opção 1.3', 'opção 1.4']\n    ),\n    new Question(\n      'Enunciado da 2ª questão',\n      'choice',\n      ['opção 2.1', 'opção 2.2', 'opção 2.3', 'opção 2.4']\n    ),\n  ]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Question[]",
@@ -738,7 +1674,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 66
+                    "line": 68
                 }
             ],
             "methodsClass": [
@@ -748,7 +1684,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 74,
+                    "line": 76,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\nConfirma a opção selecionada pelo usuário como resposta da questão atual.",
@@ -760,7 +1696,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 88,
+                    "line": 90,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\nReinicia o quiz, começando da 1ª questão e sem opção selecionada.",
@@ -779,7 +1715,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 69,
+                    "line": 71,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\nAtualiza a opção selecionada pelo usuário.",
@@ -804,7 +1740,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from \"@angular/core\"\nimport { Question } from \"./question.component\"\nimport { Answer } from \"./results.component\"\n\n@Component({\n  selector: 'app-quiz',\n  template: `\n    <div class=\"quizPane\">\n      <h1>Quiz</h1>\n      <div *ngIf=\"showResults(); else questionBlock\">\n        <div class=\"questionPane\">\n          <app-results [answers]=\"answers\"></app-results>\n        </div>\n        <button (click)=\"reset()\">Reinicia</button>\n      </div>\n      <ng-template #questionBlock>\n        <div class=\"questionPane\">\n          <div class=\"questionNumber\">\n            Questão {{ currentQuestion + 1 }} de {{ questions.length }}\n          </div>\n          <app-question\n            [statement]=\"questions[currentQuestion].statement\"\n            [options]=\"questions[currentQuestion].options\"\n            [selection]=\"currentOption\"\n            (onSelection)=\"select($event)\"\n          ></app-question>\n        </div>\n        <button (click)=\"confirm()\" [disabled]=\"currentOption === undefined\">\n          Confirma resposta\n        </button>\n      </ng-template>\n    </div>\n  `,\n  styles: [`\n    .quizPane {\n      padding: 50px;\n    }\n    .questionPane {\n      padding: 20px;\n      margin: 10px 0;\n      border-radius: 10px;\n      border: 1px solid #aaa;\n      background-color: #f0f0f0;\n    }\n    .questionNumber {\n      font-style: italic;\n      font-size: smaller;\n    }\n  `]\n})\nexport class QuizComponent {\n  questions: Question[] = [\n    {\n      statement: 'Enunciado da 1ª questão',\n      options: ['opção 1.1', 'opção 1.2', 'opção 1.3', 'opção 1.4']\n    },\n    {\n      statement: 'Enunciado da 2ª questão',\n      options: ['opção 2.1', 'opção 2.2', 'opção 2.3', 'opção 2.4']\n    },\n  ]\n  currentQuestion = 0\n  currentOption: number | undefined\n  answers: Answer[] = []\n\n  showResults = () => this.currentQuestion >= this.questions.length\n\n  /** Atualiza a opção selecionada pelo usuário. */\n  select(optionIndex: number) {\n    this.currentOption = optionIndex\n  }\n\n  /** Confirma a opção selecionada pelo usuário como resposta da questão atual. */\n  confirm() {\n    if (this.currentOption !== undefined) {\n      const question = this.questions[this.currentQuestion]\n      this.answers[this.currentQuestion] = {\n        statement: question.statement,\n        option: question.options[this.currentOption]\n      }\n    }\n    // depois de confirmar a resposta, vai para próxima questão e cancela a opção selecionada\n    this.currentQuestion++\n    this.currentOption = undefined\n  }\n\n  /** Reinicia o quiz, começando da 1ª questão e sem opção selecionada. */\n  reset() {\n    this.currentQuestion = 0\n    this.currentOption = undefined\n  }\n\n}",
+            "sourceCode": "import { Component } from \"@angular/core\"\nimport { Question } from \"../services/question.service\"\nimport { Answer } from \"./results.component\"\n\n@Component({\n  selector: 'app-quiz',\n  template: `\n    <div class=\"quizPane\">\n      <h1>Quiz</h1>\n      <div *ngIf=\"showResults(); else questionBlock\">\n        <div class=\"questionPane\">\n          <app-results [answers]=\"answers\"></app-results>\n        </div>\n        <button (click)=\"reset()\">Reinicia</button>\n      </div>\n      <ng-template #questionBlock>\n        <div class=\"questionPane\">\n          <div class=\"questionNumber\">\n            Questão {{ currentQuestion + 1 }} de {{ questions.length }}\n          </div>\n          <app-question\n            [statement]=\"questions[currentQuestion].statement\"\n            [options]=\"questions[currentQuestion].options\"\n            [selection]=\"currentOption\"\n            (onSelection)=\"select($event)\"\n          ></app-question>\n        </div>\n        <button (click)=\"confirm()\" [disabled]=\"currentOption === undefined\">\n          Confirma resposta\n        </button>\n      </ng-template>\n    </div>\n  `,\n  styles: [`\n    .quizPane {\n      padding: 50px;\n    }\n    .questionPane {\n      padding: 20px;\n      margin: 10px 0;\n      border-radius: 10px;\n      border: 1px solid #aaa;\n      background-color: #f0f0f0;\n    }\n    .questionNumber {\n      font-style: italic;\n      font-size: smaller;\n    }\n  `]\n})\nexport class QuizComponent {\n  questions: Question[] = [\n    new Question(\n      'Enunciado da 1ª questão',\n      'choice',\n      ['opção 1.1', 'opção 1.2', 'opção 1.3', 'opção 1.4']\n    ),\n    new Question(\n      'Enunciado da 2ª questão',\n      'choice',\n      ['opção 2.1', 'opção 2.2', 'opção 2.3', 'opção 2.4']\n    ),\n  ]\n  currentQuestion = 0\n  currentOption: number | undefined\n  answers: Answer[] = []\n\n  showResults = () => this.currentQuestion >= this.questions.length\n\n  /** Atualiza a opção selecionada pelo usuário. */\n  select(optionIndex: number) {\n    this.currentOption = optionIndex\n  }\n\n  /** Confirma a opção selecionada pelo usuário como resposta da questão atual. */\n  confirm() {\n    if (this.currentOption !== undefined) {\n      const question = this.questions[this.currentQuestion]\n      this.answers[this.currentQuestion] = {\n        statement: question.statement,\n        option: question.options[this.currentOption]\n      }\n    }\n    // depois de confirmar a resposta, vai para próxima questão e cancela a opção selecionada\n    this.currentQuestion++\n    this.currentOption = undefined\n  }\n\n  /** Reinicia o quiz, começando da 1ª questão e sem opção selecionada. */\n  reset() {\n    this.currentQuestion = 0\n    this.currentOption = undefined\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    .quizPane {\n      padding: 50px;\n    }\n    .questionPane {\n      padding: 20px;\n      margin: 10px 0;\n      border-radius: 10px;\n      border: 1px solid #aaa;\n      background-color: #f0f0f0;\n    }\n    .questionNumber {\n      font-style: italic;\n      font-size: smaller;\n    }\n  \n"
@@ -855,13 +1791,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-10a395c40bc2f5be9c5a50d247ca65be1626fb023615847c9a3f3510b73ef7081c5a4dce753428c2be95c8ea7934fe344edd257ea6e8e557abdf66b3ac0bf10d",
+            "id": "module-AppModule-5968cbc769d44d050acf3bcc9166208665aa7f0880ab7700ac08361b64e3747a2452da88b5b37746699592f780be685651a1d8a507012bbdc964b08460ee888b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core'\nimport { BrowserModule } from '@angular/platform-browser'\n\nimport { AppComponent } from './app.component';\nimport { MenuComponent } from './components/menu/menu.component';\nimport { MainComponent } from './components/main/main.component';\nimport { PainelComponent } from './components/painel/painel.component';\nimport { QuestionComponent } from './components/question.component'\nimport { QuizComponent } from './components/quiz.component'\nimport { ResultsComponent } from './components/results.component'\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    QuizComponent,\n    QuestionComponent,\n    ResultsComponent,\n    MenuComponent,\n    MainComponent,\n    PainelComponent\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import {NgModule} from '@angular/core'\nimport {FormsModule} from '@angular/forms'\nimport {BrowserModule} from '@angular/platform-browser'\n\nimport {AppComponent} from './app.component'\nimport {QuestionFormComponent} from './components/question-form/question-form.component'\nimport {QuestionListComponent} from './components/question-list.component'\nimport {QuestionComponent} from './components/question.component'\nimport {QuizComponent} from './components/quiz.component'\nimport {ResultsComponent} from './components/results.component'\nimport {MainComponent} from \"./components/main/main.component\";\nimport {PainelComponent} from \"./components/painel/painel.component\";\nimport {MenuComponent} from \"./components/menu/menu.component\";\nimport {ConteudoFormComponent} from './components/conteudo-form/conteudo-form.component';\n\n@NgModule({\n    declarations: [\n        AppComponent,\n        QuizComponent,\n        QuestionComponent,\n        ResultsComponent,\n        QuestionFormComponent,\n        QuestionListComponent,\n        MainComponent,\n        PainelComponent,\n        MenuComponent,\n        ConteudoFormComponent\n    ],\n  imports: [\n    BrowserModule,\n    FormsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -874,6 +1810,9 @@
                             "name": "AppComponent"
                         },
                         {
+                            "name": "ConteudoFormComponent"
+                        },
+                        {
                             "name": "MainComponent"
                         },
                         {
@@ -884,6 +1823,12 @@
                         },
                         {
                             "name": "QuestionComponent"
+                        },
+                        {
+                            "name": "QuestionFormComponent"
+                        },
+                        {
+                            "name": "QuestionListComponent"
                         },
                         {
                             "name": "QuizComponent"
@@ -1366,7 +2311,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 4,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -1379,12 +2324,21 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/components/conteudo-form/conteudo-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ConteudoFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/components/main/main.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "MainComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1393,7 +2347,7 @@
                 "linktype": "component",
                 "name": "MenuComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1402,7 +2356,25 @@
                 "linktype": "component",
                 "name": "PainelComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/question-form/question-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "QuestionFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/question-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "QuestionListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1412,15 +2384,6 @@
                 "name": "QuestionComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/question.component.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "Question",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1449,6 +2412,51 @@
                 "coveragePercent": 33,
                 "coverageCount": "1/3",
                 "status": "medium"
+            },
+            {
+                "filePath": "src/app/services/conteudo.service.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "ConteudoAba",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/conteudo.service.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "PainelInfo",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/conteudo.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "ConteudoService",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/question.service.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "Question",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/question.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "QuestionService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
             },
             {
                 "filePath": "src/environments/environment.prod.ts",
@@ -1646,7 +2654,7 @@
                 "linktype": "interface",
                 "name": "User",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

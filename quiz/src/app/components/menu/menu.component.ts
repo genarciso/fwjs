@@ -1,5 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {ConteudoService} from "../../services/conteudo.service";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -8,10 +7,10 @@ import {ConteudoService} from "../../services/conteudo.service";
 })
 export class MenuComponent {
   selecionado: number = 0
+  @Input() conteudos: [{titulo: string, conteudo:string}] = []
   @Output() selecao = new EventEmitter<number>()
 
-  constructor(public conteudoService: ConteudoService) {
-  }
+  constructor() { }
 
 
 }

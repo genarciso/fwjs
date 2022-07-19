@@ -5,22 +5,30 @@ export default {
   title: 'Tab/Menu',
   component: MenuComponent,
   argTypes: {
-    selection: {
+    selecao: {
       action: 'clicou no botão: '
     },
-    selected: {
+    selecionado: {
       control: {
         type: 'radio',
-        options: [0, 1, 2, 3]
+        options: [0, 1]
       }
     }
   }
-} as Meta<MenuComponent>
+} as Meta
 
 const Template: Story<MenuComponent> = (args) => ({
   props: args,
 })
 
 export const Menu = Template.bind({})
-
-
+Menu.args = {
+  selecionado: 0,
+  conteudos: [ {
+    titulo: "Tab 1",
+    conteudo: "Conteudo 1"
+  }, {
+    titulo: 'Tab 2',
+    conteudo: 'Conteudo 2'
+  } ]
+}

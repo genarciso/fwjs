@@ -6,6 +6,13 @@ import {Component} from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
+  conteudos = [{
+    titulo: "Tab 1",
+    conteudo: "Conteudo 1"
+  }, {
+    titulo: "Tab 2",
+    conteudo: "Conteudo 2"
+  }]
   abaSelecionada: number = 0
 
 

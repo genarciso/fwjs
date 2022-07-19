@@ -1,5 +1,5 @@
 <div id = "main">
   <app-conteudo-form></app-conteudo-form>
-  <app-menu (selecao)="select($event)"></app-menu>
-  <app-painel [aba]="abaSelecionada"> </app-painel>
+  <app-menu (selecao)="select($event)" [conteudos]="conteudos"></app-menu>
+  <app-painel [conteudo]="conteudos[abaSelecionada].conteudo"> </app-painel>
 </div>
