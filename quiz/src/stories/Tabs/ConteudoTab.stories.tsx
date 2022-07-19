@@ -1,5 +1,5 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-import {ConteudoTab} from "../../components/ConteudoTab/ConteudoTab";
+import {ConteudoTab, IConteudoTab} from "../../components/ConteudoTab/ConteudoTab";
 
 export default {
     title: 'Tab/Conteudo',
@@ -16,10 +16,16 @@ export default {
 
 const Template: ComponentStory<typeof ConteudoTab> = (args) => <ConteudoTab {...args} />
 
+const conteudosTeste = [{
+    "titulo": 'Tab 1',
+    "conteudo": 'Conteudo 1'
+}, {
+    "titulo": 'Tab 2',
+    "conteudo": 'Conteudo 2'
+}]
+
 export const Conteudo = Template.bind({})
 Conteudo.args = {
-    conteudos: [{
-        titulo: "Tab 1",
-        conteudo: "Conteudo 1"
-    }]
+    abaAtual: 0,
+    conteudos: conteudosTeste
 }
