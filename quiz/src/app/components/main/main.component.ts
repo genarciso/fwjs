@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ConteudoAba} from "../../services/conteudo.service";
 
 @Component({
   selector: 'app-main',
@@ -6,17 +7,21 @@ import {Component} from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-  conteudos = [{
-    titulo: "Tab 1",
-    conteudo: "Conteudo 1"
-  }, {
-    titulo: "Tab 2",
-    conteudo: "Conteudo 2"
-  }]
+  conteudos: ConteudoAba[] = []
   abaSelecionada: number = 0
 
 
-  constructor() {}
+  constructor() {
+    this.conteudos.push({
+      titulo: "Tab 1",
+      conteudo: "Conteudo 1",
+      aba: 0
+    }, {
+      titulo: "Tab 2",
+      conteudo: "Conteudo 2",
+      aba: 0
+    } )
+  }
 
   select(optionIndex: number) {
     this.abaSelecionada = optionIndex

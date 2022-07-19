@@ -1,0 +1,834 @@
+[0m
+[0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
+[0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
+[0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
+[48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m
+[48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m
+[48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m
+[48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m
+[48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m [0m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [48;5;255m [0m
+[0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
+[0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
+[0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
+
+1.1.19
+
+TypeScript version used by Compodoc : 4.5.5
+
+TypeScript version of current project : 4.6.2
+
+Node.js version : v16.14.2
+
+Operating system : Linux 5.4
+
+[23:15:13] No configuration file found, switching to CLI flags.
+[23:15:13] Using tsconfig file : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/tsconfig.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.browserslistrc
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.gitignore
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/README.md
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/angular.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.editorconfig
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/build-storybook.log
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/documentation.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/karma.conf.js
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/package.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/tsconfig.app.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/tsconfig.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/tsconfig.spec.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/.gitignore
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/misc.xml
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/modules.xml
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/quiz.iml
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/vcs.xml
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.storybook/main.js
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.storybook/preview.js
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.storybook/tsconfig.json
+[23:15:13] Ignoring       : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.storybook/typings.d.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/workspace.xml
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/favicon.ico
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/index.html
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/main.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/polyfills.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/styles.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/test.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/codeStyles/Project.xml
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.idea/codeStyles/codeStyleConfig.xml
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/public/build/bundle.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/public/build/bundle.js
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/public/build/bundle.js.map
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/app.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/app.module.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/assets/.gitkeep
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/environments/environment.prod.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/environments/environment.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Button.stories.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Header.stories.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Introduction.stories.mdx
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Page.stories.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/User.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/button.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/button.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/header.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/header.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/page.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/page.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/services/conteudo.service.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/services/question.service.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-list.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/quiz.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/results.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Tab/Main.stories.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Tab/Menu.stories.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Tab/Painel.stories.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/code-brackets.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/colors.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/comments.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/direction.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/flow.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/plugin.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/repo.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/assets/stackalt.svg
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/main/main.component.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/conteudo-form/conteudo-form.component.html
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/conteudo-form/conteudo-form.component.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/main/main.component.html
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/main/main.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/020aa4ab30b1279cb0a5d4608630222d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/conteudo-form/conteudo-form.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/0346cc97956dd9b0fd20660b4cc52e42.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/04860633ea114ee2c3bf98d33f0dabab.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/059832d3ef6c7749d5fd362d9391a377.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/09aa55f1216ddc992090538b727f7b63.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/0c519c66b907ea471c48a8da0b3be92e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/0c80b30607f19c82665a8d4cb7f297cc.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/0dcccb760bc45391e94a0f6046c5808a.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/0fc2a5818ceb317357451322b098aab6.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/123bef00a0d5effc2fa72f5599a71adb.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/127d3598b536cf818da924c0385fb31b.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/13b47a3f4385503750bce67fd97a6b05.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/178c5b63d630f46ad019de30b40c593e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/18a8d0fd081572a25b46039c64e30de9.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/1a05f77b7210758ac131644b1a7a51e6.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/1ba5a3bbe738721c7fa4fe1e4034ae9f.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/1cc1e35ec5f4bae8eee7b85e27785982.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/2408fdf9dc3c153b9440209f0b9d8f26.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/25723221ab73cc4692d16b60a7522cab.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/259b55d4c6f6f0b9ae5702d0b4793054.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/26456d25fde2d263e6797bc2faef1cc3.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/26d0000c573e003cf75b2560daab8e4b.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/28a6a64282192327bd994b788e7f6c53.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/28e1df7aad3ff09e1db594c502a2290a.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/28f8a65693b8b0e0ea0e61621c805f4b.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/2958cac9a92e95eaac7f76c1a682fa4e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/29d716a0997d7cb5becf3c06fe47d06b.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/2afe555cc52f7694428fd1ad6a546275.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/2ee0a43cbec69f3c4a4e215fd5e43152.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3006b2ff664b130459aa7d09ddb15e3e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3566432010d423ea4817a83cb4c0fde7.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/36a0a2b6d6fc0a05654726536afc4adb.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3bd3dc6ba83aae0a066c4ae0ddba9e1c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3c43fffdae6ed492bbf83841f3625691.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3e15009014f5f72960307de7a7bd51b8.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3e6ac24bf95088625f16df5461576413.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3e9218b1cbcfe3a3ba85485142015c46.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/3f186a904d47ce4c3246b1eeea2bf0c4.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/45a8a9fcbd858730eb98e1ecbdbe0259.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4387ff8373a67cec12a94a1ac3d95bb9.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/476765de98049b73f8001bc88fead9bd.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4848b296a068c4e6b4b5a0a1b29beee8.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4903ae7c82fc9e2bec9ce93887b5d578.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/493c349dddaceacdd8964cbef861d5af.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/494f1be2c117c7832c50fee74b4962de.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/49872223f066335b663cc60f6b1868f7.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4af8f277baf67614d931c5467fef9538.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4c1fc9c4b626f2e89a12c39ae7cb128e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4ce64518f32265adfdc33c810ae9b86e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4e7d28c51cb4f59b38c64d489f4c98f0.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/4e9218d47beec9c1eb06e49c6eec0841.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/50a77ffa62738d66ae15ba580eadee7a.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/519e95a1a0d541d557e3cab3ddb89f08.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/543aebbe8154a331dfc384ba9902770c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/54a6e4d774bcc03085285fc1fdcd25ef.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/55210fe8c6fdd438f3c539b105391be3.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/5525b4d0c05cc7e6450a1d4a2dded3f4.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/56f2a19c9b10e7a534a2c80f86f2cc7c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/57ca0c49d9815edcc2ce9ac0dda559de.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/5a375cf81013ca29aaed5a2cc2888215.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/5e6ac8df4b98d26a80f9d0f9b1f908a9.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/60b3f16d0d92fafb4e6a9d3a31bb6f00.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/623f32b8f749824f7daaf4c097e04476.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/627a6bb1805658a9f6e0082d2fcf9c19.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/67372fbe32fed2cf38ce9e40a9f1d2ee.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/679de6a8718918285bfb618d884b1d8c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/6931138ab1edced81a313da2286f83d4.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/6b2114b2fdb2e78e4fe48c3e7acac691.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/6b5c8308bf2acf53a64e09593e0fc791.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/6efb6b053f6b5badde70e920cbd7f934.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/706d4e4087314178428d998b8632471c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/73391247418429f4f31c130805213a73.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/73f20fd4de6f5b65b1921b87303ad7c5.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/7528720c2c010d4da088a735fe023a44.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/7678cf143afadaf4f63f4f6dc74b443e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/7d7968bf26d494790d68ec438549cd84.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/7f837b7b30e3cf299612869dc6f1355f.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/80059beec7256691905da45e9f1403c6.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/809133809b825f26b09b72f7dada22ae.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/83556619431ca303e8f1f5b205355c88.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/840b7b33f8ada48f7e4511a4c634cee0.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/85b1ccaf1cddb04369b0af659d31d2c9.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/85be62945063905d214cf24a2da4bdd4.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/86809a59c98359ef93156626612ba9ea.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/86e7ef7065ae6496cb7f914ad4fea7f0.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/88e85b44035759b850672a1825c12668.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/8a19bd7d6f9e887b7f20bdb2f84da162.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/8a668c83f884b6ec3effba0d5bec96af.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/8ac22262c7f2e8288178392f89b1f92c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/8baca095110330d3e26239d584ff1b46.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9053bce6e536acbe287ae9f4d0415f81.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9184b7301bab64668b958e1517a62253.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9684809285fd3f5fff963812a920a8d7.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/97c38972de631ad4c1e3706d60eabafb.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/97e67bb34369a5e92c928ec6395d7cc5.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/996a1bb8e5d95624c9fdc3635da7e156.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9a6ae2d9e7f743a19feee0f20aa904f1.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9b846cd6b424630138b371f81ccfc141.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9c37e733fbc7999274656c96544e354d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9f20f9e54ca9e94f202eb59d685cc65c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/9f6cd6124ad6973dd740ecd67a823e2d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a0d13d5c09c8bc6449961de9d0f6a779.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a261412feee7dc33d4144fb5f26106bb.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a2f38d9758085575ec5529a37b8c16e7.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a307f21cfa9b49d82fcd527256f85b56.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a42fa3237fbde0be429ab7acb9fb3785.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a48011fb6115f8649fe8612234bc7a2c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a499ba12f041e9bbfd023b22c9cb78fb.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a70bea4ecfc7da0b7f27d1c6261ad5da.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a897edcbfb7c60be64e1e209d58ee6ec.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a9146ca5e91484a7125022f042ac04ec.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/a9d356bdc8e4b9dc3950c2f7ae42eea3.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ab48181b17cccc85d5ffa888669e39e2.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ac865e424b7da47d582e6217502d3752.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/b50145f904eb3ff5cc4bb2e962e5ab4b.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/b6a3d18683bf130424e4f58132156383.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/b7b0db1178d9c4c6a80ea2e18eb67352.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/b96c151c65afc84942a0e025f873d821.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/b98f12e14ec6c3d6ff3144db749738da.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ba93748a9abc4f8b69c0feeff8fcca41.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bae00747b31d35ab69b82b5f95b850f8.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bae75bcdbf6038cf4d6f6c5b117481e4.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bb058ac2d3aa68e54e357072af040463.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bbaab0d30efae74d2e7c6b6550237f5f.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bd6708446ff434987f95ed2ef714b5d6.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bd843009a14e2349caf837335b21ad6d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bd9489702cd657384b1ae74d73420822.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/bff29168fe1a9bb8896d0f53b8a5430e.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c06ff9c3fba2885d16db70eaf9853220.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c1a55099fd5288b6ad6593972422b7f4.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c2231956f02f13cc3ce3b068253dbb79.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c41f35a879b27d685632e2461e2d2b6f.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c4ed063700e110387aac4d06ad883e33.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c4f3e06cc887c59fe1e90fe00773cad2.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c5f40d81a3a07aea97f91a750fe2cea3.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c6b9a30ee8716408ee6f0f9c9a555e08.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c7306be895c15b9d73ba8241eb6a6f83.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/c78d0992b27a55a4ce594289fde8cf22.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ca37d21df2317ee3dfe18ec3f295732f.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/cb53183b62bfecdb078525244cd2530d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/cb8d4a1826e352f90522c18b86b9c97f.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/cc0b7ad2af67e53e38716a54ccd08a99.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/cc435499068b6cfe03b19992a9fa3565.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/cf5a7ca27564e0bae4349d53754948c1.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/d32730474706aaadcaccee3d7e9de495.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/d36b0f6f6214804cc29e00745fb1e339.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/d54e566f73d1ea2f4eeca6eeb2e408a0.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/d5733df24797d5308b9fafe2856f0fdc.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/dbb08117e2615dda3f3f9dc6ccaeecde.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/e1c96494c890549711b1cfe8de464542.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/e1d401e46eadcdcd0859a31e79b3d79d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/e2b967f881fbd2e8f412e2f77f45d7f0.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/e2f2e4227682f46ae95f70be3f9a298d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/e3a1372418b6f678e38c5526fcba536a.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/e8fa6383a297890ef0508b0ba1604bce.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/eb3199068846d618c81c14ba7ec55aab.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ec36d8a76b0e528ba75f1d8f9e2fd994.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ecdd7897ecc774feb093245abedcd9ed.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ee25521e32bbe5637cef5112f07a01b3.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ef786149ec5cf66072e16d54abbf2dd1.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/f10cbde89f9b81cbc369758d354560aa.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/f21178a7210938017798be95732b853d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/f2e11ef30dd0376ae16ea25a6ce9cdf6.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/f980fdaea870066603cb9133e6f583f5.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/f9c34a3a0e3ac5b7cfb4354da862bf4c.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/fa94e5212f12bce1fc2ef04a76289a1f.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/fb47f9bae39c76b0d269896fa9f19aaf.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/fc0a9a0ca09fdf4392f026d61550c865.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/fd6ac86cbe3eae2c8e4e20516424cce0.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/babel-webpack/ffcc4c9b4de0e29447d0cfdff90ec13d.json
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/menu/menu.component.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/menu/menu.component.html
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/menu/menu.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/painel/painel.component.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/painel/painel.component.html
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/painel/painel.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-form/question-form.component.css
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-form/question-form.component.html
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-form/question-form.component.ts
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/0.pack
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/1.pack
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/4.pack
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/2.pack
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/3.pack
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/5.pack
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/index.pack
+[23:15:13] Including      : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.angular/cache/13.3.8/angular-webpack/611654856efa36b8c04b545c8ba4036e47e070a8/index.pack.old
+[23:15:13] Searching package.json file
+[23:15:13] package.json file found
+[23:15:13] Processing package.json dependencies
+[23:15:13] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
+[23:15:13] README.md file found
+[23:15:13] Error during /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/CHANGELOG read
+[23:15:13] Continuing without CHANGELOG.md file
+[23:15:13] Error during /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/CONTRIBUTING read
+[23:15:13] Continuing without CONTRIBUTING.md file
+[23:15:13] Error during /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/LICENSE read
+[23:15:13] Continuing without LICENSE.md file
+[23:15:13] Error during /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/TODO read
+[23:15:13] Continuing without TODO.md file
+[23:15:13] Get dependencies data
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/main.ts
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/polyfills.ts
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/test.ts
+[23:15:13] found          : require
+[23:15:13] found          : context
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/app.component.ts
+[23:15:13] found          : AppComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/app.module.ts
+[23:15:13] found          : AppModule
+[23:15:13]                : - imports:
+[23:15:13]                : 	- BrowserModule
+[23:15:13]                : 	- FormsModule
+[23:15:13]                : - declarations:
+[23:15:13]                : 	- AppComponent
+[23:15:13]                : 	- QuizComponent
+[23:15:13]                : 	- QuestionComponent
+[23:15:13]                : 	- ResultsComponent
+[23:15:13]                : 	- QuestionFormComponent
+[23:15:13]                : 	- QuestionListComponent
+[23:15:13]                : 	- MainComponent
+[23:15:13]                : 	- PainelComponent
+[23:15:13]                : 	- MenuComponent
+[23:15:13]                : 	- ConteudoFormComponent
+[23:15:13]                : - bootstrap:
+[23:15:13]                : 	- AppComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/environments/environment.prod.ts
+[23:15:13] found          : environment
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/environments/environment.ts
+[23:15:13] found          : environment
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Button.stories.ts
+[23:15:13] found          : Template
+[23:15:13] found          : Primary
+[23:15:13] found          : Secondary
+[23:15:13] found          : Large
+[23:15:13] found          : Small
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Header.stories.ts
+[23:15:13] found          : Template
+[23:15:13] found          : LoggedIn
+[23:15:13] found          : LoggedOut
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Page.stories.ts
+[23:15:13] found          : Template
+[23:15:13] found          : LoggedOut
+[23:15:13] found          : LoggedIn
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/User.ts
+[23:15:13] found          : User
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/button.component.ts
+[23:15:13] found          : ButtonComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/header.component.ts
+[23:15:13] found          : HeaderComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/page.component.ts
+[23:15:13] found          : PageComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/services/conteudo.service.ts
+[23:15:13] found          : PainelInfo
+[23:15:13] found          : ConteudoAba
+[23:15:13] found          : ConteudoService
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/services/question.service.ts
+[23:15:13] found          : Question
+[23:15:13] found          : QuestionService
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-list.component.ts
+[23:15:13] found          : QuestionListComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question.component.ts
+[23:15:13] found          : QuestionComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/quiz.component.ts
+[23:15:13] found          : QuizComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/results.component.ts
+[23:15:13] found          : Answer
+[23:15:13] found          : ResultsComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Tab/Main.stories.ts
+[23:15:13] found          : Template
+[23:15:13] found          : Main
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Tab/Menu.stories.ts
+[23:15:13] found          : Template
+[23:15:13] found          : Menu
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/stories/Tab/Painel.stories.ts
+[23:15:13] found          : Template
+[23:15:13] found          : Painel
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/main/main.component.ts
+[23:15:13] found          : MainComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/conteudo-form/conteudo-form.component.ts
+[23:15:13] found          : ConteudoFormComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/menu/menu.component.ts
+[23:15:13] found          : MenuComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/painel/painel.component.ts
+[23:15:13] found          : PainelComponent
+[23:15:13] parsing        : /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-form/question-form.component.ts
+[23:15:13] found          : QuestionFormComponent
+[23:15:13] -------------------
+[23:15:13] Project statistics 
+[23:15:13] - files      : 258
+[23:15:13] - module     : 1
+[23:15:13] - component  : 13
+[23:15:13] - injectable : 2
+[23:15:13] - class      : 3
+[23:15:13] - interface  : 2
+[23:15:13] -------------------
+[23:15:13] Prepare components
+[23:15:13]  ButtonComponent has styleUrls, include them
+[23:15:13]  ConteudoFormComponent has a templateUrl, include it
+[23:15:13]  ConteudoFormComponent has styleUrls, include them
+[23:15:13]  HeaderComponent has styleUrls, include them
+[23:15:13]  MainComponent has a templateUrl, include it
+[23:15:13]  MainComponent has styleUrls, include them
+[23:15:13]  MenuComponent has a templateUrl, include it
+[23:15:13]  MenuComponent has styleUrls, include them
+[23:15:13]  PageComponent has styleUrls, include them
+[23:15:13]  PainelComponent has a templateUrl, include it
+[23:15:13]  PainelComponent has styleUrls, include them
+[23:15:13]  QuestionComponent has styles, include them
+[23:15:13]  QuestionFormComponent has a templateUrl, include it
+[23:15:13]  QuestionFormComponent has styleUrls, include them
+[23:15:13]  QuestionListComponent has styles, include them
+[23:15:13]  QuizComponent has styles, include them
+[23:15:13]  ResultsComponent has styles, include them
+[23:15:13] Prepare modules
+[23:15:13] Prepare injectables
+[23:15:13] Prepare classes
+[23:15:13] Prepare interfaces
+[23:15:13] Prepare miscellaneous
+[23:15:13] Process documentation coverage report
+[23:15:13] Generating documentation in export format json
+[23:15:13] Documentation generated in ./ in 0.639 seconds
+info @storybook/angular v6.5.9
+info 
+info => Cleaning outputDir: /tmp/chromatic--34545-QPPgO7aFj4CM
+info => Loading presets
+info => Compiling manager..
+info => Compiling preview..
+info Addon-docs: using MDX1
+info => Using implicit CSS loaders
+info => Loading angular-cli config for angular >= 13.0.0
+info => Using angular project with "tsConfig:/media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/.storybook/tsconfig.json"
+WARN Your Storybook startup uses a solution that will not be supported in version 7.0. 
+WARN You must use angular builder to have an explicit configuration on the project used in angular.json
+WARN Read more at:
+WARN - https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#sb-angular-builder)
+WARN - https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#angular13)
+info => Using angular project "quiz:build" for configuring Storybook
+info => Using default Webpack5 setup
+<s> [webpack.Progress] 0% 
+
+<s> [webpack.Progress] 1% setup before run
+<s> [webpack.Progress] 1% setup before run NodeEnvironmentPlugin
+<s> [webpack.Progress] 1% setup before run
+<s> [webpack.Progress] 2% setup run
+<s> [webpack.Progress] 2% setup run
+<s> [webpack.Progress] 4% setup normal module factory
+<s> [webpack.Progress] 4% setup normal module factory CaseSensitivePathsPlugin
+<s> [webpack.Progress] 4% setup normal module factory
+<s> [webpack.Progress] 5% setup context module factory
+<s> [webpack.Progress] 5% setup context module factory
+<s> [webpack.Progress] 6% setup before compile
+<s> [webpack.Progress] 6% setup before compile angular-compiler
+<s> [webpack.Progress] 6% setup before compile ProgressPlugin
+<s> [webpack.Progress] 6% setup before compile
+<s> [webpack.Progress] 7% setup compile
+<s> [webpack.Progress] 7% setup compile ExternalsPlugin
+<s> [webpack.Progress] 7% setup compile
+<s> [webpack.Progress] 8% setup compilation
+<s> [webpack.Progress] 8% setup compilation CopyPlugin
+<s> [webpack.Progress] 8% setup compilation angular-compiler
+<s> [webpack.Progress] 8% setup compilation mini-css-extract-plugin
+<s> [webpack.Progress] 8% setup compilation ArrayPushCallbackChunkFormatPlugin
+<s> [webpack.Progress] 8% setup compilation JsonpChunkLoadingPlugin
+<s> [webpack.Progress] 8% setup compilation StartupChunkDependenciesPlugin
+<s> [webpack.Progress] 8% setup compilation ImportScriptsChunkLoadingPlugin
+<s> [webpack.Progress] 8% setup compilation FetchCompileWasmPlugin
+<s> [webpack.Progress] 8% setup compilation FetchCompileAsyncWasmPlugin
+<s> [webpack.Progress] 8% setup compilation WorkerPlugin
+<s> [webpack.Progress] 8% setup compilation SplitChunksPlugin
+<s> [webpack.Progress] 8% setup compilation RuntimeChunkPlugin
+<s> [webpack.Progress] 8% setup compilation ResolverCachePlugin
+<s> [webpack.Progress] 8% setup compilation HtmlWebpackPlugin
+<s> [webpack.Progress] 8% setup compilation
+<s> [webpack.Progress] 9% setup compilation
+<s> [webpack.Progress] 9% setup compilation named-chunks-plugin
+<s> [webpack.Progress] 9% setup compilation DedupeModuleResolvePlugin
+<s> [webpack.Progress] 9% setup compilation AnyComponentStyleBudgetChecker
+<s> [webpack.Progress] 9% setup compilation mini-css-extract-plugin
+<s> [webpack.Progress] 9% setup compilation SuppressExtractedTextChunks
+<s> [webpack.Progress] 9% setup compilation DefinePlugin
+<s> [webpack.Progress] 9% setup compilation ProvidePlugin
+<s> [webpack.Progress] 9% setup compilation ProgressPlugin
+<s> [webpack.Progress] 9% setup compilation ChunkPrefetchPreloadPlugin
+<s> [webpack.Progress] 9% setup compilation SourceMapDevToolPlugin
+<s> [webpack.Progress] 9% setup compilation JavascriptModulesPlugin
+<s> [webpack.Progress] 9% setup compilation JsonModulesPlugin
+<s> [webpack.Progress] 9% setup compilation AssetModulesPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation RuntimePlugin
+<s> [webpack.Progress] 9% setup compilation InferAsyncModulesPlugin
+<s> [webpack.Progress] 9% setup compilation DataUriPlugin
+<s> [webpack.Progress] 9% setup compilation FileUriPlugin
+<s> [webpack.Progress] 9% setup compilation CompatibilityPlugin
+<s> [webpack.Progress] 9% setup compilation HarmonyModulesPlugin
+<s> [webpack.Progress] 9% setup compilation AMDPlugin
+<s> [webpack.Progress] 9% setup compilation RequireJsStuffPlugin
+<s> [webpack.Progress] 9% setup compilation CommonJsPlugin
+<s> [webpack.Progress] 9% setup compilation LoaderPlugin
+<s> [webpack.Progress] 9% setup compilation LoaderPlugin
+<s> [webpack.Progress] 9% setup compilation NodeStuffPlugin
+<s> [webpack.Progress] 9% setup compilation APIPlugin
+<s> [webpack.Progress] 9% setup compilation ExportsInfoApiPlugin
+<s> [webpack.Progress] 9% setup compilation WebpackIsIncludedPlugin
+<s> [webpack.Progress] 9% setup compilation ConstPlugin
+<s> [webpack.Progress] 9% setup compilation UseStrictPlugin
+<s> [webpack.Progress] 9% setup compilation RequireIncludePlugin
+<s> [webpack.Progress] 9% setup compilation RequireEnsurePlugin
+<s> [webpack.Progress] 9% setup compilation RequireContextPlugin
+<s> [webpack.Progress] 9% setup compilation ImportPlugin
+<s> [webpack.Progress] 9% setup compilation RequireContextPlugin
+<s> [webpack.Progress] 9% setup compilation SystemPlugin
+<s> [webpack.Progress] 9% setup compilation ImportMetaPlugin
+<s> [webpack.Progress] 9% setup compilation URLPlugin
+<s> [webpack.Progress] 9% setup compilation DefaultStatsFactoryPlugin
+<s> [webpack.Progress] 9% setup compilation DefaultStatsPresetPlugin
+<s> [webpack.Progress] 9% setup compilation DefaultStatsPrinterPlugin
+<s> [webpack.Progress] 9% setup compilation JavascriptMetaInfoPlugin
+<s> [webpack.Progress] 9% setup compilation EnsureChunkConditionsPlugin
+<s> [webpack.Progress] 9% setup compilation RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 9% setup compilation MergeDuplicateChunksPlugin
+<s> [webpack.Progress] 9% setup compilation FlagIncludedChunksPlugin
+<s> [webpack.Progress] 9% setup compilation SideEffectsFlagPlugin
+<s> [webpack.Progress] 9% setup compilation FlagDependencyExportsPlugin
+<s> [webpack.Progress] 9% setup compilation FlagDependencyUsagePlugin
+<s> [webpack.Progress] 9% setup compilation InnerGraphPlugin
+<s> [webpack.Progress] 9% setup compilation MangleExportsPlugin
+<s> [webpack.Progress] 9% setup compilation ModuleConcatenationPlugin
+<s> [webpack.Progress] 9% setup compilation NoEmitOnErrorsPlugin
+<s> [webpack.Progress] 9% setup compilation RealContentHashPlugin
+<s> [webpack.Progress] 9% setup compilation WasmFinalizeExportsPlugin
+<s> [webpack.Progress] 9% setup compilation NamedModuleIdsPlugin
+<s> [webpack.Progress] 9% setup compilation DeterministicChunkIdsPlugin
+<s> [webpack.Progress] 9% setup compilation DefinePlugin
+<s> [webpack.Progress] 9% setup compilation TerserPlugin
+<s> [webpack.Progress] 9% setup compilation TemplatedPathPlugin
+<s> [webpack.Progress] 9% setup compilation RecordIdsPlugin
+<s> [webpack.Progress] 9% setup compilation WarnCaseSensitiveModulesPlugin
+<s> [webpack.Progress] 9% setup compilation IgnoreWarningsPlugin
+<s> [webpack.Progress] 9% setup compilation
+<s> [webpack.Progress] 10% building
+<s> [webpack.Progress] 10% building 0/1 entries 0/0 dependencies 0/0 modules
+<s> [webpack.Progress] 10% building import loader ./node_modules/@angular-devkit/build-angular/src/babel/webpack-loader.js
+<s> [webpack.Progress] 10% building 0/17 entries 11/17 dependencies 0/11 modules
+<s> [webpack.Progress] 10% building import loader ./node_modules/babel-loader/lib/index.js
+<s> [webpack.Progress] 10% building 0/17 entries 11/17 dependencies 0/11 modules
+<s> [webpack.Progress] 10% building 0/17 entries 12/17 dependencies 0/11 modules
+<s> [webpack.Progress] 10% building import loader ./node_modules/mini-css-extract-plugin/dist/loader.js
+<s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
+<s> [webpack.Progress] 10% building import loader ./node_modules/postcss-loader/dist/cjs.js
+<s> [webpack.Progress] 10% building 0/17 entries 12/17 dependencies 0/12 modules
+<s> [webpack.Progress] 10% building import loader ./node_modules/@ngtools/webpack/src/ivy/index.js
+<s> [webpack.Progress] 10% building 0/17 entries 14/18 dependencies 0/14 modules
+<s> [webpack.Progress] 13% building 1/17 entries 75/94 dependencies 5/46 modules
+<s> [webpack.Progress] 13% building import loader ./node_modules/@storybook/mdx1-csf/loader.js
+<s> [webpack.Progress] 13% building 1/17 entries 137/226 dependencies 7/76 modules
+<s> [webpack.Progress] 16% building 2/17 entries 205/234 dependencies 14/113 modules
+<s> [webpack.Progress] 16% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
+<s> [webpack.Progress] 16% building 2/17 entries 205/234 dependencies 14/113 modules
+<s> [webpack.Progress] 19% building 3/17 entries 282/392 dependencies 28/128 modules
+<s> [webpack.Progress] 19% building 3/17 entries 573/700 dependencies 73/235 modules
+<s> [webpack.Progress] 19% building 3/17 entries 800/1031 dependencies 86/296 modules
+<s> [webpack.Progress] 19% building 3/17 entries 1117/1200 dependencies 117/368 modules
+<s> [webpack.Progress] 19% building 3/17 entries 1257/1284 dependencies 154/400 modules
+<s> [webpack.Progress] 19% building 3/17 entries 1328/1500 dependencies 167/412 modules
+<s> [webpack.Progress] 19% building 3/17 entries 1600/1926 dependencies 193/452 modules
+<s> [webpack.Progress] 22% building 4/17 entries 1978/2202 dependencies 246/635 modules
+<s> [webpack.Progress] 22% building 4/17 entries 2426/2500 dependencies 299/681 modules
+<s> [webpack.Progress] 22% building 4/17 entries 2952/3000 dependencies 329/744 modules
+<s> [webpack.Progress] 22% building 4/17 entries 3023/3300 dependencies 340/761 modules
+<s> [webpack.Progress] 22% building 4/17 entries 3600/3783 dependencies 425/957 modules
+<s> [webpack.Progress] 22% building 4/17 entries 4000/4071 dependencies 547/1019 modules
+<s> [webpack.Progress] 22% building 4/17 entries 4371/4500 dependencies 573/1055 modules
+<s> [webpack.Progress] 22% building 4/17 entries 4800/4890 dependencies 770/1160 modules
+<s> [webpack.Progress] 22% building 4/17 entries 5167/5300 dependencies 884/1260 modules
+<s> [webpack.Progress] 22% building 4/17 entries 5600/5654 dependencies 1042/1392 modules
+<s> [webpack.Progress] 22% building 4/17 entries 5972/6000 dependencies 1158/1597 modules
+<s> [webpack.Progress] 24% building 4/17 entries 6136/6200 dependencies 1274/1612 modules
+<s> [webpack.Progress] 25% building 4/17 entries 6400/6447 dependencies 1446/1639 modules
+<s> [webpack.Progress] 27% building 5/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 29% building 6/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 32% building 7/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 35% building 8/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 39% building 9/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 42% building 10/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 45% building 11/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 48% building 12/17 entries 6691/6712 dependencies 1607/1697 modules
+<s> [webpack.Progress] 52% building 13/17 entries 6802/6814 dependencies 1648/1726 modules
+<s> [webpack.Progress] 55% building 14/17 entries 6933/6934 dependencies 1722/1771 modules
+<s> [webpack.Progress] 58% building 15/17 entries 6933/6934 dependencies 1722/1771 modules
+<s> [webpack.Progress] 61% building 16/17 entries 6940/6941 dependencies 1747/1771 modules
+<s> [webpack.Progress] 65% building 17/17 entries 6942/6942 dependencies 1772/1772 modules
+<s> [webpack.Progress] 65% building
+<s> [webpack.Progress] 69% building finish
+<s> [webpack.Progress] 69% building finish
+<s> [webpack.Progress] 70% sealing finish module graph
+<s> [webpack.Progress] 70% sealing finish module graph angular-compiler
+<s> [webpack.Progress] 70% sealing finish module graph ResolverCachePlugin
+<s> [webpack.Progress] 70% sealing finish module graph InferAsyncModulesPlugin
+<s> [webpack.Progress] 70% sealing finish module graph FlagDependencyExportsPlugin
+<s> [webpack.Progress] 70% sealing finish module graph InnerGraphPlugin
+<s> [webpack.Progress] 70% sealing finish module graph WasmFinalizeExportsPlugin
+<s> [webpack.Progress] 70% sealing finish module graph
+<s> [webpack.Progress] 70% sealing plugins
+<s> [webpack.Progress] 70% sealing plugins WarnCaseSensitiveModulesPlugin
+<s> [webpack.Progress] 70% sealing plugins
+<s> [webpack.Progress] 71% sealing dependencies optimization
+<s> [webpack.Progress] 71% sealing dependencies optimization SideEffectsFlagPlugin
+<s> [webpack.Progress] 71% sealing dependencies optimization FlagDependencyUsagePlugin
+<s> [webpack.Progress] 71% sealing dependencies optimization
+<s> [webpack.Progress] 71% sealing after dependencies optimization
+<s> [webpack.Progress] 71% sealing after dependencies optimization
+<s> [webpack.Progress] 72% sealing chunk graph
+<s> [webpack.Progress] 72% sealing chunk graph
+<s> [webpack.Progress] 73% sealing after chunk graph
+<s> [webpack.Progress] 73% sealing after chunk graph
+<s> [webpack.Progress] 73% sealing optimizing
+<s> [webpack.Progress] 73% sealing optimizing
+<s> [webpack.Progress] 74% sealing module optimization
+<s> [webpack.Progress] 74% sealing module optimization
+<s> [webpack.Progress] 75% sealing after module optimization
+<s> [webpack.Progress] 75% sealing after module optimization
+<s> [webpack.Progress] 75% sealing chunk optimization
+<s> [webpack.Progress] 75% sealing chunk optimization EnsureChunkConditionsPlugin
+<s> [webpack.Progress] 75% sealing chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 75% sealing chunk optimization MergeDuplicateChunksPlugin
+<s> [webpack.Progress] 75% sealing chunk optimization SplitChunksPlugin
+<s> [webpack.Progress] 75% sealing chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 75% sealing chunk optimization
+<s> [webpack.Progress] 76% sealing after chunk optimization
+<s> [webpack.Progress] 76% sealing after chunk optimization
+<s> [webpack.Progress] 77% sealing module and chunk tree optimization
+<s> [webpack.Progress] 77% sealing module and chunk tree optimization PersistentChildCompilerSingletonPlugin
+<s> [webpack.Progress] 77% sealing module and chunk tree optimization
+<s> [webpack.Progress] 77% sealing after module and chunk tree optimization
+<s> [webpack.Progress] 77% sealing after module and chunk tree optimization
+<s> [webpack.Progress] 78% sealing chunk modules optimization
+<s> [webpack.Progress] 78% sealing chunk modules optimization ModuleConcatenationPlugin
+<s> [webpack.Progress] 78% sealing chunk modules optimization
+<s> [webpack.Progress] 78% sealing after chunk modules optimization
+<s> [webpack.Progress] 78% sealing after chunk modules optimization
+<s> [webpack.Progress] 79% sealing module reviving
+<s> [webpack.Progress] 79% sealing module reviving RecordIdsPlugin
+<s> [webpack.Progress] 79% sealing module reviving
+<s> [webpack.Progress] 80% sealing before module ids
+<s> [webpack.Progress] 80% sealing before module ids
+<s> [webpack.Progress] 80% sealing module ids
+<s> [webpack.Progress] 80% sealing module ids NamedModuleIdsPlugin
+<s> [webpack.Progress] 80% sealing module ids
+<s> [webpack.Progress] 81% sealing module id optimization
+<s> [webpack.Progress] 81% sealing module id optimization
+<s> [webpack.Progress] 82% sealing module id optimization
+<s> [webpack.Progress] 82% sealing module id optimization
+<s> [webpack.Progress] 82% sealing chunk reviving
+<s> [webpack.Progress] 82% sealing chunk reviving RecordIdsPlugin
+<s> [webpack.Progress] 82% sealing chunk reviving
+<s> [webpack.Progress] 83% sealing before chunk ids
+<s> [webpack.Progress] 83% sealing before chunk ids
+<s> [webpack.Progress] 84% sealing chunk ids
+<s> [webpack.Progress] 84% sealing chunk ids DeterministicChunkIdsPlugin
+<s> [webpack.Progress] 84% sealing chunk ids
+<s> [webpack.Progress] 84% sealing chunk id optimization
+<s> [webpack.Progress] 84% sealing chunk id optimization FlagIncludedChunksPlugin
+<s> [webpack.Progress] 84% sealing chunk id optimization
+<s> [webpack.Progress] 85% sealing after chunk id optimization
+<s> [webpack.Progress] 85% sealing after chunk id optimization
+<s> [webpack.Progress] 86% sealing record modules
+<s> [webpack.Progress] 86% sealing record modules RecordIdsPlugin
+<s> [webpack.Progress] 86% sealing record modules
+<s> [webpack.Progress] 86% sealing record chunks
+<s> [webpack.Progress] 86% sealing record chunks RecordIdsPlugin
+<s> [webpack.Progress] 86% sealing record chunks
+<s> [webpack.Progress] 87% sealing module hashing
+<s> [webpack.Progress] 87% sealing module hashing
+<s> [webpack.Progress] 87% sealing code generation
+<s> [webpack.Progress] 87% sealing code generation
+<s> [webpack.Progress] 88% sealing runtime requirements
+<s> [webpack.Progress] 88% sealing runtime requirements
+<s> [webpack.Progress] 89% sealing hashing
+<s> [webpack.Progress] 89% sealing hashing
+<s> [webpack.Progress] 89% sealing after hashing
+<s> [webpack.Progress] 89% sealing after hashing
+<s> [webpack.Progress] 90% sealing record hash
+<s> [webpack.Progress] 90% sealing record hash
+<s> [webpack.Progress] 91% sealing module assets processing
+<s> [webpack.Progress] 91% sealing module assets processing
+<s> [webpack.Progress] 91% sealing chunk assets processing
+<s> [webpack.Progress] 91% sealing chunk assets processing
+<s> [webpack.Progress] 92% sealing asset processing
+<s> [webpack.Progress] 92% sealing asset processing copy-webpack-plugin
+<s> [webpack.Progress] 92% sealing asset processing PersistentChildCompilerSingletonPlugin
+<s> [webpack.Progress] 92% sealing asset processing TerserPlugin
+info => Manager built (44 s)
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.css generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.css generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.0282cfb3.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.0282cfb3.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.ae0fd4e8.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.ae0fd4e8.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 747.4d3d4145.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 747.4d3d4145.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 218.32e91e33.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 218.32e91e33.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 510.1bf0ba1a.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 510.1bf0ba1a.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 345.71c25769.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 345.71c25769.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 867.5c8edae2.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 867.5c8edae2.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 686.bc95ceee.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 686.bc95ceee.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 233.e2e409bd.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 233.e2e409bd.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 291.af4e1dd5.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 291.af4e1dd5.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 643.6f89994d.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 643.6f89994d.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 643.6f89994d.iframe.bundle.js attach SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 643.6f89994d.iframe.bundle.js attached SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
+<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
+<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin resolve sources
+<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.7f7c51f8.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.7f7c51f8.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.1a040af3.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.1a040af3.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 747.03f7df7c.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 747.03f7df7c.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 345.fd5610d9.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 345.fd5610d9.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 686.073b5527.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 686.073b5527.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 233.801208a2.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 233.801208a2.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 218.8b9bfa7a.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 218.8b9bfa7a.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 510.813f7f09.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 510.813f7f09.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 867.b216b4ad.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 867.b216b4ad.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 291.9a959a68.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 291.9a959a68.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin resolve sources
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
+<s> [webpack.Progress] 92% sealing asset processing AnyComponentStyleBudgetChecker
+<s> [webpack.Progress] 92% sealing asset processing
+<s> [webpack.Progress] 93% sealing after asset optimization
+<s> [webpack.Progress] 93% sealing after asset optimization
+<s> [webpack.Progress] 93% sealing recording
+<s> [webpack.Progress] 93% sealing recording
+<s> [webpack.Progress] 94% sealing after seal
+<s> [webpack.Progress] 94% sealing after seal
+<s> [webpack.Progress] 95% emitting emit
+<s> [webpack.Progress] 95% emitting emit
+<s> [webpack.Progress] 98% emitting after emit
+<s> [webpack.Progress] 98% emitting after emit SizeLimitsPlugin
+<s> [webpack.Progress] 98% emitting after emit
+<s> [webpack.Progress] 99% done plugins
+<s> [webpack.Progress] 99% done plugins CaseSensitivePathsPlugin
+<s> [webpack.Progress] 99% done plugins
+<s> [webpack.Progress] 99% 
+
+<s> [webpack.Progress] 99% cache store build dependencies
+<s> [webpack.Progress] 99% cache store build dependencies
+<s> [webpack.Progress] 99% cache begin idle
+<s> [webpack.Progress] 99% cache begin idle
+<s> [webpack.Progress] 100% 
+
+info => Preview built (56 s)
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/app.component.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/app.module.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/conteudo-form/conteudo-form.component.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-form/question-form.component.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question-list.component.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/question.component.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/quiz.component.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/components/results.component.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/app/services/question.service.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/environments/environment.prod.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/environments/environment.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN /media/gabriel/Disco Compartilhado/Documentos/Universidade/FWJS/fwjs/quiz/src/main.ts is part of the TypeScript compilation but it's unused.
+WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
+WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+WARN This can impact web performance.
+WARN Assets: 
+WARN   510.813f7f09.iframe.bundle.js (791 KiB)
+WARN   643.fe032cf8.iframe.bundle.js (3.7 MiB)
+WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+WARN Entrypoints:
+WARN   main (3.83 MiB)
+WARN       runtime~main.1a040af3.iframe.bundle.js
+WARN       643.fe032cf8.iframe.bundle.js
+WARN       main.css
+WARN       main.7f7c51f8.iframe.bundle.js
+WARN 
+<s> [webpack.Progress] 99% cache shutdown
+<s> [webpack.Progress] 99% cache shutdown
+<s> [webpack.Progress] 100% 
+
+info => Output directory: /tmp/chromatic--34545-QPPgO7aFj4CM

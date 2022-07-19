@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {ConteudoAba} from "../../services/conteudo.service";
 
 @Component({
   selector: 'app-menu',
@@ -7,10 +8,20 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class MenuComponent {
   selecionado: number = 0
-  @Input() conteudos: [{titulo: string, conteudo:string}] = []
+  @Input() conteudos: ConteudoAba[] = []
   @Output() selecao = new EventEmitter<number>()
 
-  constructor() { }
+  constructor() {
+    this.conteudos.push({
+      titulo: "Tab 1",
+      conteudo: "Conteudo 1",
+      aba: 0
+    }, {
+      titulo: "Tab 2",
+      conteudo: "Conteudo 2",
+      aba: 0
+    } )
+  }
 
 
 }

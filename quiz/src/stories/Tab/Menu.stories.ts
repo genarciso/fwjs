@@ -26,9 +26,11 @@ Menu.args = {
   selecionado: 0,
   conteudos: [ {
     titulo: "Tab 1",
-    conteudo: "Conteudo 1"
+    conteudo: "Conteudo 1",
+    aba: 0
   }, {
     titulo: 'Tab 2',
-    conteudo: 'Conteudo 2'
+    conteudo: 'Conteudo 2',
+    aba: 0
   } ]
 }
