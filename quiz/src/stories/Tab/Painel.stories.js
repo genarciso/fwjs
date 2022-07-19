@@ -4,13 +4,11 @@ export default {
     title: 'Tab/Painel',
     component: Painel,
     argType: {
-        abaAtual: {
+        conteudo: {
             control: {
-                type: 'radio',
-
-            },
-            options: [0, 1, 2, 3],
-        },
+                type: 'text'
+            }
+        }
     }
 };
 const Template = (args) => ({
@@ -25,5 +23,5 @@ const Template = (args) => ({
 
 export const Teste = Template.bind({});
 Teste.args = {
-    abaAtual: 0
+    conteudo: "Teste"
 }

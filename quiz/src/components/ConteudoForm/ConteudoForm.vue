@@ -35,11 +35,11 @@
 </template>
 
 <script setup lang="ts">
-import type {ConteudoModel} from "@/models/CoteundoModel";
+import type {ConteudoModel} from "../../models/CoteundoModel";
 import {reactive} from "vue";
-import { errorValidation } from "@/utils/errorValidation";
-import { touchValidation} from "@/utils/touchValidation";
-import {inRange, isInt, required} from "@/utils/validation";
+import { errorValidation } from "../../utils/errorValidation";
+import { touchValidation} from "../../utils/touchValidation";
+import {inRange, isInt, required} from "../../utils/validation";
 
 export interface ConteudoFormEvent {
   (e: 'onSubmit', conteudos: ConteudoModel[]): void

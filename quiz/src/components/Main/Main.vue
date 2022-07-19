@@ -1,38 +1,34 @@
 <template>
-  <div>
-    <ConteudoForm @on-submit="addConteudos($event)"></ConteudoForm>
-  </div>
   <div id = "main">
     <Menu @on-selection="select"
-          :conteudos="conteudoStore.conteudosStore"
-          :selecionado="abaSelecionada"
+          :conteudos="conteudos"
     ></Menu>
-    <Painel :conteudo="conteudoStore.conteudosStore[abaSelecionada] ?
-    conteudoStore.conteudosStore[abaSelecionada].conteudo : ''"> </Painel>
+    <Painel :conteudo="conteudos[abaSelecionada].conteudo "> </Painel>
   </div>
 </template>
 
 <script setup lang="ts">
-import {conteudoStore} from "@/store/conteudo.store"
 import Menu from "../Menu/Menu.vue";
 import Painel from "../Painel/Painel.vue";
 import {ref} from "vue";
-import ConteudoForm  from "@/components/ConteudoForm/ConteudoForm.vue";
-import type {ConteudoModel} from "@/models/CoteundoModel";
+import type {ConteudoModel} from "../../models/CoteundoModel";
 
 const abaSelecionada = ref(0)
+const conteudos: ConteudoModel[] = [{
+  titulo: "Tab 1",
+  conteudo: "Conteudo 1"
+}, {
+  titulo: "Tab 2",
+  conteudo: "Conteudo 2"
+}]
 
-  function select(optionIndex: number) {
-    abaSelecionada.value = optionIndex
-  }
-
-function addConteudos(conteudos: ConteudoModel[]) {
-  conteudoStore.add([...conteudos])
+function select(optionIndex: number) {
+  abaSelecionada.value = optionIndex
 }
 </script>
 
 <style scoped>
-  #main {
-    background-color: aliceblue;
-  }
+#main {
+  background-color: aliceblue;
+}
 </style>

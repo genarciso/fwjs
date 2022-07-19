@@ -13,13 +13,19 @@ const Template = (args) => ({
     // Components used in your story `template` are defined in the `components` object
     components: { Menu },
     setup() {
-        return {...args};
+        return { args };
     },
     // Here we define the `template`
-    template: '<Menu :selected="selected"></Menu>',
+    template: '<Menu v-bind="args" ></Menu>',
 });
 
 export const Teste = Template.bind({});
 Teste.args = {
-    selected: 0
+    conteudos: [{
+        titulo: "Tab 1",
+        conteudo: "Conteudo 1"
+    }, {
+        titulo: "Tab 2",
+        conteudo: "Conteudo 2"
+    }]
 }
